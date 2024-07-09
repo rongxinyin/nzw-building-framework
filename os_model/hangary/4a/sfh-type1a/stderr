@@ -1,0 +1,7 @@
+EnergyPlus Completed Successfully.
+Failed to run workflow. Last Error:
+  Found error in state 'ReportingMeasures' with message: 'Runner error: Measure '/private/var/folders/fq/6vcnqd4d3nlcwtdmsgb31hx40000gn/T/osmodel-b3a4-4367-244e-0638-1720560680-0/resources/measures/OpenStudioResults/measure.rb' reported an error with [SWIG director method error. RuntimeError: Optional not initialized
+
+Traceback (most recent call last):
+/private/var/folders/fq/6vcnqd4d3nlcwtdmsgb31hx40000gn/T/osmodel-b3a4-4367-244e-0638-1720560680-0/resources/measures/OpenStudioResults/measure.rb:347:in `get'
+/private/var/folders/fq/6vcnqd4d3nlcwtdmsgb31hx40000gn/T/osmodel-b3a4-4367-244e-0638-1720560680-0/resources/measures/OpenStudioResults/measure.rb:347:in `run']'

@@ -1,0 +1,273 @@
+Program Version,EnergyPlus, Version 23.2.0-7636e6b3e9, YMD=2024.07.09 14:31,
+   ** Warning ** Timestep: Requested number (2) is less than the suggested minimum of 4.
+   **   ~~~   ** Please see entry for Timestep in Input/Output Reference for discussion of considerations.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="0", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Day:Interval="50", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="189 COOLING AVAILABILITY SCH", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="7", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="DESIGN DAYS ONLY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="OFF", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="ONSUMMERDESIGNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="ONWINTERDESIGNDAY", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Compact="OPAQUESHADE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
+   **   ~~~   ** Found first in surface=189_GROUNDFLOOR_0_0_0
+   **   ~~~   ** Defaults, constant throughout the year of (18.0) will be used.
+   ** Warning ** GetSurfaceData: Construction FLOOR-CONST of interzone surface 241_FLOOR_2_0_10000 does not have the same materials in the reverse order as the construction CEILING-CONST of adjacent surface 189_CEILING_1_0_0
+   **   ~~~   ** or the properties of the reversed layers are not correct due to differing layer front and back side values
+   **   ~~~   ** ...but Nominal U values are similar, diff=[0.0000] ... simulation proceeds.
+   **   ~~~   ** ...if the two zones are expected to have significantly different temperatures, the proper "reverse" construction should be created.
+   **   ~~~   ** ...this problem for this pair will not be reported again.
+   ** Warning ** CheckUsedConstructions: There are 5 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** GetInternalHeatGains: People="PEOPLE 189" has comfort related schedules but no thermal comfort model selected.
+   **   ~~~   ** If schedules are specified for air velocity, clothing insulation, and/or work efficiency but no thermal comfort
+   **   ~~~   ** thermal comfort model is selected, the schedules will be listed as unused schedules in the .err file.
+   **   ~~~   ** To avoid these errors, select a valid thermal comfort model or eliminate these schedules in the PEOPLE input.
+   ** Warning ** Calculated design cooling load for zone=LIVING-UNIT is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning Plant Sizing Calculations
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#189#07:INTERIOREQUIPMENT*" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#189#07:INTERIOREQUIPMENT* 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#189#07:INTERIOREQUIPMENT* 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#241#07:INTERIOREQUIPMENT*" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#241#07:INTERIOREQUIPMENT* 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRIC EQUIPMENT#241#07:INTERIOREQUIPMENT* 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIOREQUIPMENT:ELECTRICITY 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIORLIGHTS:ELECTRICITY 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="INTERIORLIGHTS:ELECTRICITY 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRICITY:FACILITY 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="ELECTRICITY:FACILITY 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY 1" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="NATURALGAS:FACILITY 2" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTCOOLING:FACILITY" - not found.
+   ** Warning ** Output:Meter: invalid Key Name="DISTRICTHEATING:FACILITY" - not found.
+   ** Warning ** Output:Meter:MeterFileOnly requested for "Electricity:Facility" (TimeStep), already on "Output:Meter". Will report to both eplusout.eso and eplusout.mtr
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ************* No node connection errors were found.
+   ************* Beginning Simulation
+   ** Warning ** Processing Monthly Tabular Reports: Variable names not valid for this simulation
+   **   ~~~   ** ...use Output:Diagnostics,DisplayExtraWarnings; to show more details on individual variables.
+   ** Warning ** More than 4% of time (350.4 hours) uncomfortable in one or more zones 
+   **   ~~~   ** Based on ASHRAE 55-2004 graph (Section 5.2.1.1)
+   **   ~~~   ** During Environment [01/01/2006 - 12/31/2006]: DETACHED HOUSE (01-01:31-12)
+   **   ~~~   ** 6990.5 hours were uncomfortable in zone: LIVING-UNIT
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-DISTILLATE OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-RESIDUAL OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-NATURAL GAS" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-COAL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR SENSIBLE COOLING RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Daily
+   ************* Key=241, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Daily
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=189, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Monthly
+   ************* Key=241, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=Monthly
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=Monthly
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=189, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=
+   ************* Key=189, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=189, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=189, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=
+   ************* Key=189, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=
+   ************* Key=241, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=
+   ************* Key=241, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=
+   ************* Key=241, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=189, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=Daily
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=
+   ************* Key=241, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=241, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=241, VarName=ZONE MECHANICAL VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=
+   ************* Key=189, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=Daily
+   ************* Key=*, VarName=OTHER EQUIPMENT ELECTRICITY RATE, Frequency=
+   ************* Key=*, VarName=OTHER EQUIPMENT NATURALGAS RATE, Frequency=
+   ************* Key=*, VarName=ZONE LIGHTS ELECTRIC POWER, Frequency=
+   ************* Key=189, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=Daily
+   ************* Key=189, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=Daily
+   ************* Key=241, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=Daily
+   ************* Key=241, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=Daily
+   ************* Key=241, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=Daily
+   ************* Key=241, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=Daily
+   ************* Key=189, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=189, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=Monthly
+   ************* Key=241, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=Monthly
+   ************* Key=189, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=
+   ************* Key=189, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=
+   ************* Key=189, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=
+   ************* Key=189, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=241, VarName=ZONE MEAN AIR TEMPERATURE, Frequency=
+   ************* Key=241, VarName=ZONE MEAN RADIANT TEMPERATURE, Frequency=
+   ************* Key=241, VarName=ZONE OPERATIVE TEMPERATURE, Frequency=
+   ************* Key=241, VarName=ZONE AIR RELATIVE HUMIDITY, Frequency=
+   ************* Key=189, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE VENTILATION AIR CHANGE RATE, Frequency=Daily
+   ************* Key=241, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE VENTILATION AIR CHANGE RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=189, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=
+   ************* Key=189, VarName=ZONE VENTILATION AIR CHANGE RATE, Frequency=
+   ************* Key=241, VarName=ZONE INFILTRATION AIR CHANGE RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL COOLING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE COOLING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL COOLING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE VENTILATION FAN ELECTRICITY ENERGY, Frequency=Daily
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=Daily
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE AIR SYSTEM SENSIBLE HEATING RATE, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR SENSIBLE COOLING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL COOLING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE COOLING RATE, Frequency=Monthly
+   ************* Key=241, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER OR WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Daily
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL COOLING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE VENTILATION FAN ELECTRICITY ENERGY, Frequency=Monthly
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=Monthly
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=Monthly
+   ************* Key=189, VarName=ZONE AIR SYSTEM SENSIBLE HEATING RATE, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR SENSIBLE COOLING RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL COOLING RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS SUPPLY AIR TOTAL HEATING RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE HEATING RATE, Frequency=
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL SUMMER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL HEATING RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY SENSIBLE COOLING RATE, Frequency=
+   ************* Key=*, VarName=ZONE IDEAL LOADS HEAT RECOVERY TOTAL COOLING RATE, Frequency=
+   ************* Key=*, VarName=ZONE VENTILATION FAN ELECTRICITY ENERGY, Frequency=
+   ************* Key=*, VarName=FAN ELECTRICITY RATE, Frequency=
+   ************* Key=*, VarName=WATER USE EQUIPMENT HEATING RATE, Frequency=
+   ************* Key=189, VarName=ZONE AIR SYSTEM SENSIBLE HEATING RATE, Frequency=
+   ************* Key=189, VarName=ZONE PEOPLE SENSIBLE HEATING RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE WINDOWS TOTAL TRANSMITTED SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE THERMAL COMFORT ASHRAE 55 SIMPLE MODEL WINTER CLOTHES NOT COMFORTABLE TIME, Frequency=Monthly
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED DIFFUSE SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE INTERIOR WINDOWS TOTAL TRANSMITTED BEAM SOLAR RADIATION RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE INFILTRATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE VENTILATION SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT LOSS ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE MIXING SENSIBLE HEAT GAIN ENERGY, Frequency=Daily
+   ************* Key=189, VarName=ZONE MIXING STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* Key=189, VarName=ZONE VENTILATION STANDARD DENSITY VOLUME FLOW RATE, Frequency=Daily
+   ************* There are 21 unused schedules in input.
+   ************* There are 11 unused week schedules in input.
+   ************* There are 17 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 16 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 43 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  1.18sec
