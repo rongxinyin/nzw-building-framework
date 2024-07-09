@@ -300,6 +300,922 @@ ScheduleTypeLimits,
     availability;            !- Unit Type
 
 
+  Schedule:Compact,
+    BA_shower_sch,           !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,0.00194740740740741, !- Field 3
+    Until: 2:00,0.000885185185185185, !- Field 5
+    Until: 3:00,0.000531111111111111, !- Field 7
+    Until: 4:00,0.000885185185185185, !- Field 9
+    Until: 5:00,0.00247851851851852, !- Field 11
+    Until: 6:00,0.00920592592592592, !- Field 13
+    Until: 7:00,0.0208903703703704, !- Field 15
+    Until: 8:00,0.0207133333333333, !- Field 17
+    Until: 9:00,0.0168185185185185, !- Field 19
+    Until: 10:00,0.0131007407407407, !- Field 21
+    Until: 11:00,0.0106222222222222, !- Field 23
+    Until: 12:00,0.00832074074074074, !- Field 25
+    Until: 13:00,0.00601925925925926, !- Field 27
+    Until: 14:00,0.00513407407407407, !- Field 29
+    Until: 15:00,0.00460296296296296, !- Field 31
+    Until: 16:00,0.00442592592592593, !- Field 33
+    Until: 17:00,0.00531111111111111, !- Field 35
+    Until: 18:00,0.00690444444444444, !- Field 37
+    Until: 19:00,0.00743555555555556, !- Field 39
+    Until: 20:00,0.00743555555555556, !- Field 41
+    Until: 21:00,0.00743555555555556, !- Field 43
+    Until: 22:00,0.00725851851851852, !- Field 45
+    Until: 23:00,0.00513407407407407, !- Field 47
+    Until: 24:00,0.00371777777777778; !- Field 49
+
+  Schedule:Compact,
+    BA_bath_sch,             !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,0.000181818181818182, !- Field 3
+    Until: 2:00,9.09090909090909e-05, !- Field 5
+    Until: 3:00,9.09090909090909e-05, !- Field 7
+    Until: 4:00,9.09090909090909e-05, !- Field 9
+    Until: 5:00,0.000181818181818182, !- Field 11
+    Until: 6:00,0.000431818181818182, !- Field 13
+    Until: 7:00,0.00104545454545455, !- Field 15
+    Until: 8:00,0.00131818181818182, !- Field 17
+    Until: 9:00,0.0015,      !- Field 19
+    Until: 10:00,0.00131818181818182, !- Field 21
+    Until: 11:00,0.00104545454545455, !- Field 23
+    Until: 12:00,0.000795454545454545, !- Field 25
+    Until: 13:00,0.000704545454545454, !- Field 27
+    Until: 14:00,0.000522727272727273, !- Field 29
+    Until: 15:00,0.000522727272727273, !- Field 31
+    Until: 16:00,0.000522727272727273, !- Field 33
+    Until: 17:00,0.000886363636363636, !- Field 35
+    Until: 18:00,0.00104545454545455, !- Field 37
+    Until: 19:00,0.00175,    !- Field 39
+    Until: 20:00,0.00227272727272727, !- Field 41
+    Until: 21:00,0.00227272727272727, !- Field 43
+    Until: 22:00,0.00175,    !- Field 45
+    Until: 23:00,0.0015,     !- Field 47
+    Until: 24:00,0.000886363636363636; !- Field 49
+
+  Schedule:Compact,
+    BA_sink_sch,             !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,0.0043187134502924, !- Field 3
+    Until: 2:00,0.0021593567251462, !- Field 5
+    Until: 3:00,0.00154239766081871, !- Field 7
+    Until: 4:00,0.00154239766081871, !- Field 9
+    Until: 5:00,0.0021593567251462, !- Field 11
+    Until: 6:00,0.00555263157894737, !- Field 13
+    Until: 7:00,0.0129561403508772, !- Field 15
+    Until: 8:00,0.019125730994152, !- Field 17
+    Until: 9:00,0.020359649122807, !- Field 19
+    Until: 10:00,0.019125730994152, !- Field 21
+    Until: 11:00,0.0166578947368421, !- Field 23
+    Until: 12:00,0.0154239766081871, !- Field 25
+    Until: 13:00,0.0151154970760234, !- Field 27
+    Until: 14:00,0.0138815789473684, !- Field 29
+    Until: 15:00,0.0132646198830409, !- Field 31
+    Until: 16:00,0.0126476608187135, !- Field 33
+    Until: 17:00,0.0148070175438597, !- Field 35
+    Until: 18:00,0.0200511695906433, !- Field 37
+    Until: 19:00,0.0231359649122807, !- Field 39
+    Until: 20:00,0.0212850877192982, !- Field 41
+    Until: 21:00,0.0175833333333333, !- Field 43
+    Until: 22:00,0.0148070175438597, !- Field 45
+    Until: 23:00,0.0123391812865497, !- Field 47
+    Until: 24:00,0.00832894736842105; !- Field 49
+
+
+  Schedule:Day:Hourly,
+    RefrigeratorDay,         !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.8,                     !- Hour 1
+    0.782696177062374,       !- Hour 2
+    0.765593561368209,       !- Hour 3
+    0.742857142857143,       !- Hour 4
+    0.731388329979879,       !- Hour 5
+    0.731388329979879,       !- Hour 6
+    0.759959758551308,       !- Hour 7
+    0.8,                     !- Hour 8
+    0.817102615694165,       !- Hour 9
+    0.828571428571429,       !- Hour 10
+    0.8,                     !- Hour 11
+    0.8,                     !- Hour 12
+    0.839839034205231,       !- Hour 13
+    0.839839034205231,       !- Hour 14
+    0.828571428571429,       !- Hour 15
+    0.839839034205231,       !- Hour 16
+    0.885714285714286,       !- Hour 17
+    0.971428571428572,       !- Hour 18
+    1,                       !- Hour 19
+    0.971428571428572,       !- Hour 20
+    0.942857142857143,       !- Hour 21
+    0.925553319919517,       !- Hour 22
+    0.885714285714286,       !- Hour 23
+    0.828571428571429;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    MiscPlugLoadDay,         !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.607490272373541,       !- Hour 1
+    0.559338521400778,       !- Hour 2
+    0.552853437094682,       !- Hour 3
+    0.545071335927367,       !- Hour 4
+    0.524481193255512,       !- Hour 5
+    0.585278858625162,       !- Hour 6
+    0.676232166018158,       !- Hour 7
+    0.718547341115435,       !- Hour 8
+    0.607490272373541,       !- Hour 9
+    0.517023346303502,       !- Hour 10
+    0.529182879377432,       !- Hour 11
+    0.529345006485084,       !- Hour 12
+    0.520428015564202,       !- Hour 13
+    0.538424124513619,       !- Hour 14
+    0.568741893644617,       !- Hour 15
+    0.600356679636835,       !- Hour 16
+    0.71011673151751,        !- Hour 17
+    0.862678339818418,       !- Hour 18
+    0.936608300907912,       !- Hour 19
+    0.966763942931258,       !- Hour 20
+    1,                       !- Hour 21
+    0.976653696498055,       !- Hour 22
+    0.845168612191959,       !- Hour 23
+    0.73443579766537;        !- Hour 24
+
+  Schedule:Day:Hourly,
+    CookingRangeDay,         !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.04715848452508,        !- Hour 1
+    0.04715848452508,        !- Hour 2
+    0.0235458911419424,      !- Hour 3
+    0.0235458911419424,      !- Hour 4
+    0.04715848452508,        !- Hour 5
+    0.0707043756670224,      !- Hour 6
+    0.165088046958378,       !- Hour 7
+    0.283017609391676,       !- Hour 8
+    0.306563500533618,       !- Hour 9
+    0.320771077908218,       !- Hour 10
+    0.283017609391676,       !- Hour 11
+    0.330176093916756,       !- Hour 12
+    0.377334578441836,       !- Hour 13
+    0.306563500533618,       !- Hour 14
+    0.292422625400213,       !- Hour 15
+    0.377334578441836,       !- Hour 16
+    0.613193703308431,       !- Hour 17
+    1,                       !- Hour 18
+    0.778348452508004,       !- Hour 19
+    0.400947171824973,       !- Hour 20
+    0.235859124866596,       !- Hour 21
+    0.165088046958378,       !- Hour 22
+    0.103721985058698,       !- Hour 23
+    0.0707043756670224;      !- Hour 24
+
+  Schedule:Day:Hourly,
+    DishwasherWeekday,       !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.129162158913331,       !- Hour 1
+    0.0573867051328282,      !- Hour 2
+    0.0429979564851542,      !- Hour 3
+    0.0286933525664145,      !- Hour 4
+    0.0286933525664145,      !- Hour 5
+    0.0860800576992427,      !- Hour 6
+    0.172244260127419,       !- Hour 7
+    0.258408462555596,       !- Hour 8
+    0.488207717273711,       !- Hour 9
+    0.545594422406539,       !- Hour 10
+    0.473818968626037,       !- Hour 11
+    0.402043514845535,       !- Hour 12
+    0.344572664983772,       !- Hour 13
+    0.387654766197861,       !- Hour 14
+    0.315879312417358,       !- Hour 15
+    0.301490563769684,       !- Hour 16
+    0.315879312417358,       !- Hour 17
+    0.416348118764274,       !- Hour 18
+    0.732311575910566,       !- Hour 19
+    0.93333333333333,        !- Hour 20
+    0.761004928476981,       !- Hour 21
+    0.559983171054213,       !- Hour 22
+    0.373266017550187,       !- Hour 23
+    0.258408462555596;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    DishwasherWeekend,       !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.13838802740714,        !- Hour 1
+    0.0614857554994591,      !- Hour 2
+    0.0460692390912369,      !- Hour 3
+    0.0307428777497295,      !- Hour 4
+    0.0307428777497295,      !- Hour 5
+    0.0922286332491886,      !- Hour 6
+    0.184547421565092,       !- Hour 7
+    0.276866209880995,       !- Hour 8
+    0.523079697078976,       !- Hour 9
+    0.584565452578435,       !- Hour 10
+    0.507663180670754,       !- Hour 11
+    0.430760908763072,       !- Hour 12
+    0.369184998196899,       !- Hour 13
+    0.41534439235485,        !- Hour 14
+    0.338442120447169,       !- Hour 15
+    0.323025604038947,       !- Hour 16
+    0.338442120447169,       !- Hour 17
+    0.44608727010458,        !- Hour 18
+    0.784619545618464,       !- Hour 19
+    1,                       !- Hour 20
+    0.815362423368193,       !- Hour 21
+    0.599981968986657,       !- Hour 22
+    0.399927875946628,       !- Hour 23
+    0.276866209880995;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    DishwasherVacation,      !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesWasherWeekday,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0887931470412736,      !- Hour 1
+    0.0710155041111689,      !- Hour 2
+    0.0354602182509584,      !- Hour 3
+    0.0354602182509584,      !- Hour 4
+    0.0710155041111689,      !- Hour 5
+    0.106570789971378,       !- Hour 6
+    0.213141579942758,       !- Hour 7
+    0.461933513354977,       !- Hour 8
+    0.69294780383709,        !- Hour 9
+    0.817391304347826,       !- Hour 10
+    0.799613661417722,       !- Hour 11
+    0.710725446767196,       !- Hour 12
+    0.639614875046775,       !- Hour 13
+    0.568599370935607,       !- Hour 14
+    0.497488799215186,       !- Hour 15
+    0.461933513354977,       !- Hour 16
+    0.479711156285081,       !- Hour 17
+    0.461933513354977,       !- Hour 18
+    0.461933513354977,       !- Hour 19
+    0.461933513354977,       !- Hour 20
+    0.461933513354977,       !- Hour 21
+    0.444155870424871,       !- Hour 22
+    0.302029794593282,       !- Hour 23
+    0.159903718761693;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesWasherWeekend,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.108629913933473,       !- Hour 1
+    0.086880669923238,       !- Hour 2
+    0.0433821819027681,      !- Hour 3
+    0.0433821819027681,      !- Hour 4
+    0.086880669923238,       !- Hour 5
+    0.130379157943708,       !- Hour 6
+    0.260758315887416,       !- Hour 7
+    0.565131425913003,       !- Hour 8
+    0.847755291928355,       !- Hour 9
+    1,                       !- Hour 10
+    0.978250755989765,       !- Hour 11
+    0.86950453593859,        !- Hour 12
+    0.782507559897651,       !- Hour 13
+    0.695626889974413,       !- Hour 14
+    0.608629913933473,       !- Hour 15
+    0.565131425913003,       !- Hour 16
+    0.586880669923238,       !- Hour 17
+    0.565131425913003,       !- Hour 18
+    0.565131425913003,       !- Hour 19
+    0.565131425913003,       !- Hour 20
+    0.565131425913003,       !- Hour 21
+    0.543382181902768,       !- Hour 22
+    0.36950453593859,        !- Hour 23
+    0.195626889974413;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesWasherVacation,   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    dhw_profile_day,         !- Name
+    fraction,                !- Schedule Type Limits Name
+    0.006,                   !- Hour 1
+    0.003,                   !- Hour 2
+    0.001,                   !- Hour 3
+    0.001,                   !- Hour 4
+    0.003,                   !- Hour 5
+    0.021,                   !- Hour 6
+    0.075,                   !- Hour 7
+    0.079,                   !- Hour 8
+    0.076,                   !- Hour 9
+    0.067,                   !- Hour 10
+    0.061,                   !- Hour 11
+    0.05,                    !- Hour 12
+    0.042,                   !- Hour 13
+    0.038,                   !- Hour 14
+    0.033,                   !- Hour 15
+    0.038,                   !- Hour 16
+    0.043,                   !- Hour 17
+    0.058,                   !- Hour 18
+    0.068,                   !- Hour 19
+    0.065,                   !- Hour 20
+    0.06,                    !- Hour 21
+    0.047,                   !- Hour 22
+    0.041,                   !- Hour 23
+    0.024;                   !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesDryerWeekday,     !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0996818663838815,      !- Hour 1
+    0.0598091198303289,      !- Hour 2
+    0.0398727465535526,      !- Hour 3
+    0.0199363732767763,      !- Hour 4
+    0.0398727465535526,      !- Hour 5
+    0.0598091198303289,      !- Hour 6
+    0.15949098621421,        !- Hour 7
+    0.31898197242842,        !- Hour 8
+    0.486427370202556,       !- Hour 9
+    0.685791102970318,       !- Hour 10
+    0.785472969354199,       !- Hour 11
+    0.817391304347826,       !- Hour 12
+    0.745600222800647,       !- Hour 13
+    0.677836691410393,       !- Hour 14
+    0.610073160020138,       !- Hour 15
+    0.578154825026511,       !- Hour 16
+    0.558218451749735,       !- Hour 17
+    0.546236490032885,       !- Hour 18
+    0.518345705196183,       !- Hour 19
+    0.510391293636256,       !- Hour 20
+    0.526300116756109,       !- Hour 21
+    0.546236490032885,       !- Hour 22
+    0.438600212089077,       !- Hour 23
+    0.239236479321316;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesDryerWeekend,     !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.121951219512195,       !- Hour 1
+    0.0731707317073171,      !- Hour 2
+    0.0487804878048781,      !- Hour 3
+    0.024390243902439,       !- Hour 4
+    0.0487804878048781,      !- Hour 5
+    0.0731707317073171,      !- Hour 6
+    0.195121951219512,       !- Hour 7
+    0.390243902439024,       !- Hour 8
+    0.59509731460951,        !- Hour 9
+    0.8389997536339,         !- Hour 10
+    0.960950973146095,       !- Hour 11
+    1,                       !- Hour 12
+    0.912170485341217,       !- Hour 13
+    0.829268292682927,       !- Hour 14
+    0.746366100024637,       !- Hour 15
+    0.707317073170732,       !- Hour 16
+    0.682926829268293,       !- Hour 17
+    0.668268046316827,       !- Hour 18
+    0.634146341463415,       !- Hour 19
+    0.624414880512441,       !- Hour 20
+    0.643877802414388,       !- Hour 21
+    0.668268046316827,       !- Hour 22
+    0.536585365853659,       !- Hour 23
+    0.292682926829268;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ClothesDryerVacation,    !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    SinksWeekday,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.178431090172197,       !- Hour 1
+    0.0855612360359615,      !- Hour 2
+    0.0641394243627467,      !- Hour 3
+    0.0641394243627467,      !- Hour 4
+    0.0855612360359615,      !- Hour 5
+    0.228457320962002,       !- Hour 6
+    0.535419281173493,       !- Hour 7
+    0.785298413808711,       !- Hour 8
+    0.828142037155143,       !- Hour 9
+    0.778115806365338,       !- Hour 10
+    0.685371962886004,       !- Hour 11
+    0.628163124652828,       !- Hour 12
+    0.613923920422985,       !- Hour 13
+    0.571080297076553,       !- Hour 14
+    0.521054066286749,       !- Hour 15
+    0.542475877959965,       !- Hour 16
+    0.606741312979612,       !- Hour 17
+    0.82095942971177,        !- Hour 18
+    0.942307692307692,       !- Hour 19
+    0.870985660501574,       !- Hour 20
+    0.713850371345691,       !- Hour 21
+    0.606741312979612,       !- Hour 22
+    0.499758265270435,       !- Hour 23
+    0.342622976114552;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    SinksWeekend,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.18935544263172,        !- Hour 1
+    0.0907996790585718,      !- Hour 2
+    0.0680663278951591,      !- Hour 3
+    0.0680663278951591,      !- Hour 4
+    0.0907996790585718,      !- Hour 5
+    0.242444503878042,       !- Hour 6
+    0.568200053490238,       !- Hour 7
+    0.833377908531693,       !- Hour 8
+    0.878844610858518,       !- Hour 9
+    0.825755549612196,       !- Hour 10
+    0.727333511634127,       !- Hour 11
+    0.666622091468307,       !- Hour 12
+    0.651511099224392,       !- Hour 13
+    0.606044396897566,       !- Hour 14
+    0.552955335651244,       !- Hour 15
+    0.575688686814656,       !- Hour 16
+    0.643888740304894,       !- Hour 17
+    0.871222251939021,       !- Hour 18
+    1,                       !- Hour 19
+    0.924311313185344,       !- Hour 20
+    0.757555496121958,       !- Hour 21
+    0.643888740304894,       !- Hour 22
+    0.53035571008291,        !- Hour 23
+    0.363599893019524;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    SinksVacation,           !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ShowersWeekday,          !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0847763225038272,      !- Hour 1
+    0.0384986108748656,      !- Hour 2
+    0.0269887169019672,      !- Hour 3
+    0.0384986108748656,      !- Hour 4
+    0.10795486760787,        !- Hour 5
+    0.408799682485684,       !- Hour 6
+    0.93333333333333,        !- Hour 7
+    0.92563361115836,        !- Hour 8
+    0.752112037194534,       !- Hour 9
+    0.590100357203606,       !- Hour 10
+    0.47436638884164,        !- Hour 11
+    0.374111243408743,       !- Hour 12
+    0.269966547598798,       !- Hour 13
+    0.231388558144809,       !- Hour 14
+    0.200510290865794,       !- Hour 15
+    0.208210013040766,       !- Hour 16
+    0.239088280319782,       !- Hour 17
+    0.308544537052787,       !- Hour 18
+    0.335533253954754,       !- Hour 19
+    0.335533253954754,       !- Hour 20
+    0.331643703577706,       !- Hour 21
+    0.323943981402733,       !- Hour 22
+    0.231388558144809,       !- Hour 23
+    0.165821851788853;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ShowersWeekend,          !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0908317741112434,      !- Hour 1
+    0.0412485116516414,      !- Hour 2
+    0.0289164823949651,      !- Hour 3
+    0.0412485116516414,      !- Hour 4
+    0.115665929579861,       !- Hour 5
+    0.437999659806089,       !- Hour 6
+    1,                       !- Hour 7
+    0.991750297669672,       !- Hour 8
+    0.805834325565572,       !- Hour 9
+    0.632250382718149,       !- Hour 10
+    0.508249702330328,       !- Hour 11
+    0.400833475080796,       !- Hour 12
+    0.289249872427284,       !- Hour 13
+    0.24791631229801,        !- Hour 14
+    0.214832454499064,       !- Hour 15
+    0.223082156829393,       !- Hour 16
+    0.256166014628338,       !- Hour 17
+    0.330583432556557,       !- Hour 18
+    0.359499914951522,       !- Hour 19
+    0.359499914951522,       !- Hour 20
+    0.355332539547542,       !- Hour 21
+    0.347082837217214,       !- Hour 22
+    0.24791631229801,        !- Hour 23
+    0.177666269773771;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    ShowersVacation,         !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    BathsWeekday,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0549341075342269,      !- Hour 1
+    0.027467053767114,       !- Hour 2
+    0.027467053767114,       !- Hour 3
+    0.027467053767114,       !- Hour 4
+    0.0549341075342269,      !- Hour 5
+    0.137335268835568,       !- Hour 6
+    0.329675803375743,       !- Hour 7
+    0.412076964677084,       !- Hour 8
+    0.467011072211311,       !- Hour 9
+    0.412076964677084,       !- Hour 10
+    0.329675803375743,       !- Hour 11
+    0.247203483904022,       !- Hour 12
+    0.219736430136909,       !- Hour 13
+    0.164802322602681,       !- Hour 14
+    0.164802322602681,       !- Hour 15
+    0.164802322602681,       !- Hour 16
+    0.274741695841516,       !- Hour 17
+    0.329675803375743,       !- Hour 18
+    0.549483391683034,       !- Hour 19
+    0.714285714285714,       !- Hour 20
+    0.714285714285714,       !- Hour 21
+    0.549483391683034,       !- Hour 22
+    0.467011072211311,       !- Hour 23
+    0.274741695841516;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    BathsWeekend,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.0769077505479179,      !- Hour 1
+    0.038453875273959,       !- Hour 2
+    0.038453875273959,       !- Hour 3
+    0.038453875273959,       !- Hour 4
+    0.0769077505479179,      !- Hour 5
+    0.192269376369795,       !- Hour 6
+    0.461546124726041,       !- Hour 7
+    0.576907750547918,       !- Hour 8
+    0.653815501095836,       !- Hour 9
+    0.576907750547918,       !- Hour 10
+    0.461546124726041,       !- Hour 11
+    0.346084877465631,       !- Hour 12
+    0.307631002191672,       !- Hour 13
+    0.230723251643754,       !- Hour 14
+    0.230723251643754,       !- Hour 15
+    0.230723251643754,       !- Hour 16
+    0.384638374178123,       !- Hour 17
+    0.461546124726041,       !- Hour 18
+    0.769276748356246,       !- Hour 19
+    1,                       !- Hour 20
+    1,                       !- Hour 21
+    0.769276748356246,       !- Hour 22
+    0.653815501095836,       !- Hour 23
+    0.384638374178123;       !- Hour 24
+
+  Schedule:Day:Hourly,
+    BathsVacation,           !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0,                       !- Hour 1
+    0,                       !- Hour 2
+    0,                       !- Hour 3
+    0,                       !- Hour 4
+    0,                       !- Hour 5
+    0,                       !- Hour 6
+    0,                       !- Hour 7
+    0,                       !- Hour 8
+    0,                       !- Hour 9
+    0,                       !- Hour 10
+    0,                       !- Hour 11
+    0,                       !- Hour 12
+    0,                       !- Hour 13
+    0,                       !- Hour 14
+    0,                       !- Hour 15
+    0,                       !- Hour 16
+    0,                       !- Hour 17
+    0,                       !- Hour 18
+    0,                       !- Hour 19
+    0,                       !- Hour 20
+    0,                       !- Hour 21
+    0,                       !- Hour 22
+    0,                       !- Hour 23
+    0;                       !- Hour 24
+
+  Schedule:Day:Hourly,
+    DHWDistDay,              !- Name
+    Fraction,                !- Schedule Type Limits Name
+    0.142553149370226,       !- Hour 1
+    0.0764866759550322,      !- Hour 2
+    0.0516611840277747,      !- Hour 3
+    0.0584039294664903,      !- Hour 4
+    0.121469841058603,       !- Hour 5
+    0.366180268451559,       !- Hour 6
+    0.833258955739606,       !- Hour 7
+    0.999999987228391,       !- Hour 8
+    0.995483090581232,       !- Hour 9
+    0.916474762598139,       !- Hour 10
+    0.800898393293271,       !- Hour 11
+    0.682564390940485,       !- Hour 12
+    0.590066600109555,       !- Hour 13
+    0.522371887032053,       !- Hour 14
+    0.466005974303267,       !- Hour 15
+    0.46573704253214,        !- Hour 16
+    0.527514234916123,       !- Hour 17
+    0.637905701335668,       !- Hour 18
+    0.727588642310272,       !- Hour 19
+    0.732551127624518,       !- Hour 20
+    0.681468471942116,       !- Hour 21
+    0.610804704600985,       !- Hour 22
+    0.464292318119835,       !- Hour 23
+    0.299867724445383;       !- Hour 24
+
+  Schedule:Week:Compact,
+    RefrigeratorWeek,        !- Name
+    For: AllDays,            !- DayType List 1
+    RefrigeratorDay;         !- Schedule:Day Name 1
+
+  Schedule:Week:Compact,
+    MiscPlugLoadWeek,        !- Name
+    For: AllDays,            !- DayType List 1
+    MiscPlugLoadDay;         !- Schedule:Day Name 1
+
+  Schedule:Week:Compact,
+    CookingRangeWeek,        !- Name
+    For: AllDays,            !- DayType List 1
+    CookingRangeDay;         !- Schedule:Day Name 1
+
+  Schedule:Week:Compact,
+    DishwasherWeek,          !- Name
+    For: Weekdays,           !- DayType List 1
+    DishwasherWeekday,       !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    DishwasherVacation,      !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    DishwasherWeekend;       !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    ClothesWasherWeek,       !- Name
+    For: Weekdays,           !- DayType List 1
+    ClothesWasherWeekday,    !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    ClothesWasherVacation,   !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    ClothesWasherWeekend;    !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    dhw_profile_week,        !- Name
+    AllDays,                 !- DayType List 1
+    dhw_profile_day;         !- Schedule:Day Name 1
+
+  Schedule:Week:Compact,
+    ClothesDryerWeek,        !- Name
+    For: Weekdays,           !- DayType List 1
+    ClothesDryerWeekday,     !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    ClothesDryerVacation,    !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    ClothesDryerWeekend;     !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    SinksWeek,               !- Name
+    For: Weekdays,           !- DayType List 1
+    SinksWeekday,            !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    SinksVacation,           !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    SinksWeekend;            !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    ShowersWeek,             !- Name
+    For: Weekdays,           !- DayType List 1
+    ShowersWeekday,          !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    ShowersVacation,         !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    ShowersWeekend;          !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    BathsWeek,               !- Name
+    For: Weekdays,           !- DayType List 1
+    BathsWeekday,            !- Schedule:Day Name 1
+    For: CustomDay1,         !- DayType List 2
+    BathsVacation,           !- Schedule:Day Name 2
+    For: AllOtherDays,       !- DayType List 3
+    BathsWeekend;            !- Schedule:Day Name 3
+
+  Schedule:Week:Compact,
+    DHWDistWeek,             !- Name
+    For: AllDays,            !- DayType List 1
+    DHWDistDay;              !- Schedule:Day Name 1
+
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:YEAR ===========
+
+  Schedule:Year,
+    Refrigerator,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    RefrigeratorWeek,        !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    MiscPlugLoad,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    MiscPlugLoadWeek,        !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    CookingRange,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    CookingRangeWeek,        !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    dhw_sch,                 !- Name
+    fraction,                !- Schedule Type Limits Name
+    dhw_profile_week,        !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    Dishwasher,              !- Name
+    Fraction,                !- Schedule Type Limits Name
+    DishwasherWeek,          !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    ClothesWasher,           !- Name
+    Fraction,                !- Schedule Type Limits Name
+    ClothesWasherWeek,       !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    ClothesDryer,            !- Name
+    Fraction,                !- Schedule Type Limits Name
+    ClothesDryerWeek,        !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    Sinks,                   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    SinksWeek,               !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    Showers,                 !- Name
+    Fraction,                !- Schedule Type Limits Name
+    ShowersWeek,             !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    Baths,                   !- Name
+    Fraction,                !- Schedule Type Limits Name
+    BathsWeek,               !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
+  Schedule:Year,
+    DHWDist,                 !- Name
+    Fraction,                !- Schedule Type Limits Name
+    DHWDistWeek,             !- Schedule:Week Name 1
+    1,                       !- Start Month 1
+    1,                       !- Start Day 1
+    12,                      !- End Month 1
+    31;                      !- End Day 1
+
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
 
 Schedule:Compact,
