@@ -644,34 +644,6 @@ ScheduleTypeLimits,
     0;                       !- Hour 24
 
   Schedule:Day:Hourly,
-    dhw_profile_day,         !- Name
-    fraction,                !- Schedule Type Limits Name
-    0.006,                   !- Hour 1
-    0.003,                   !- Hour 2
-    0.001,                   !- Hour 3
-    0.001,                   !- Hour 4
-    0.003,                   !- Hour 5
-    0.021,                   !- Hour 6
-    0.075,                   !- Hour 7
-    0.079,                   !- Hour 8
-    0.076,                   !- Hour 9
-    0.067,                   !- Hour 10
-    0.061,                   !- Hour 11
-    0.05,                    !- Hour 12
-    0.042,                   !- Hour 13
-    0.038,                   !- Hour 14
-    0.033,                   !- Hour 15
-    0.038,                   !- Hour 16
-    0.043,                   !- Hour 17
-    0.058,                   !- Hour 18
-    0.068,                   !- Hour 19
-    0.065,                   !- Hour 20
-    0.06,                    !- Hour 21
-    0.047,                   !- Hour 22
-    0.041,                   !- Hour 23
-    0.024;                   !- Hour 24
-
-  Schedule:Day:Hourly,
     ClothesDryerWeekday,     !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0996818663838815,      !- Hour 1
@@ -1069,11 +1041,6 @@ ScheduleTypeLimits,
     ClothesWasherWeekend;    !- Schedule:Day Name 3
 
   Schedule:Week:Compact,
-    dhw_profile_week,        !- Name
-    AllDays,                 !- DayType List 1
-    dhw_profile_day;         !- Schedule:Day Name 1
-
-  Schedule:Week:Compact,
     ClothesDryerWeek,        !- Name
     For: Weekdays,           !- DayType List 1
     ClothesDryerWeekday,     !- Schedule:Day Name 1
@@ -1139,15 +1106,6 @@ ScheduleTypeLimits,
     CookingRange,            !- Name
     Fraction,                !- Schedule Type Limits Name
     CookingRangeWeek,        !- Schedule:Week Name 1
-    1,                       !- Start Month 1
-    1,                       !- Start Day 1
-    12,                      !- End Month 1
-    31;                      !- End Day 1
-
-  Schedule:Year,
-    dhw_sch,                 !- Name
-    fraction,                !- Schedule Type Limits Name
-    dhw_profile_week,        !- Schedule:Week Name 1
     1,                       !- Start Month 1
     1,                       !- Start Day 1
     12,                      !- End Month 1
@@ -1440,7 +1398,7 @@ Schedule:Compact,
 
 Schedule:Compact,
     189 Cooling Availability Sch,  !- Name
-    ,                        !- Schedule Type Limits Name
+    OnOff,                        !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until: 24:00,            !- Field 3
@@ -1496,7 +1454,7 @@ Schedule:Compact,
 
 Schedule:Compact,
     Off,                     !- Name
-    ,                        !- Schedule Type Limits Name
+    OnOff,                        !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until: 24:00,            !- Field 3
@@ -1504,6 +1462,14 @@ Schedule:Compact,
 
 Schedule:Compact,
     On,                      !- Name
+    OnOff,                   !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,            !- Field 3
+    1;                       !- Field 4
+
+Schedule:Compact,
+    ALWAYS_AVAIL,                      !- Name
     OnOff,                   !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
@@ -1524,7 +1490,7 @@ Schedule:Compact,
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until 24:00,             !- Field 3
-    48;                      !- Field 4
+    49;                      !- Field 4
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:CONSTANT ===========
@@ -1532,55 +1498,15 @@ Schedule:Compact,
 Schedule:Constant,
     DWWaterTempSchedule,     !- Name
     Temperature,             !- Schedule Type Limits Name
-    48.8888888888889;        !- Hourly Value
+    47;        !- Hourly Value
 
 Schedule:Constant,
     CWWaterTempSchedule,     !- Name
     Temperature,             !- Schedule Type Limits Name
-    48.8888888888889;        !- Hourly Value
-
-Schedule:Constant,
-    SinkSensSchedule,        !- Name
-    Fraction,                !- Schedule Type Limits Name
-    0.687777777777778;       !- Hourly Value
-
-Schedule:Constant,
-    SinkLatSchedule,         !- Name
-    Fraction,                !- Schedule Type Limits Name
-    0.312222222222222;       !- Hourly Value
-
-Schedule:Constant,
-    ShowerSensSchedule,      !- Name
-    Fraction,                !- Schedule Type Limits Name
-    0.51280276816609;        !- Hourly Value
-
-Schedule:Constant,
-    ShowerLatSchedule,       !- Name
-    Fraction,                !- Schedule Type Limits Name
-    0.48719723183391;        !- Hourly Value
-
-Schedule:Constant,
-    BathSensSchedule,        !- Name
-    Fraction,                !- Schedule Type Limits Name
-    1;                       !- Hourly Value
-
-Schedule:Constant,
-    BathLatSchedule,         !- Name
-    Fraction,                !- Schedule Type Limits Name
-    0;                       !- Hourly Value
+    47;        !- Hourly Value
 
 Schedule:Constant,
     SSBWaterTempSchedule,    !- Name
-    Temperature,             !- Schedule Type Limits Name
-    40.5555555555556;        !- Hourly Value
-
-Schedule:Constant,
-    WaterHeaterSP1Schedule,  !- Name
-    Temperature,             !- Schedule Type Limits Name
-    48.8888888888889;        !- Hourly Value
-
-Schedule:Constant,
-    WaterHeaterSP2Schedule,  !- Name
     Temperature,             !- Schedule Type Limits Name
     40.5555555555556;        !- Hourly Value
 
@@ -1597,16 +1523,6 @@ Schedule:Constant,
 Schedule:Constant,
     Always On Discrete,      !- Name
     OnOff,                   !- Schedule Type Limits Name
-    1;                       !- Hourly Value
-
-Schedule:Constant,
-    Always Off Discrete,     !- Name
-    ,                        !- Schedule Type Limits Name
-    0;                       !- Hourly Value
-
-Schedule:Constant,
-    Always On Continuous,    !- Name
-    ,                        !- Schedule Type Limits Name
     1;                       !- Hourly Value
 
 
@@ -1828,30 +1744,6 @@ WindowMaterial:SimpleGlazingSystem,
 !-   ===========  ALL OBJECTS IN CLASS: CONSTRUCTION ===========
 
 Construction,
-    10,                      !- Name
-    9_3_77,                  !- Outside Layer
-    9_2_111,                 !- Layer 2
-    9_1_33;                  !- Layer 3
-
-Construction,
-    2,                       !- Name
-    1_4_34,                  !- Outside Layer
-    1_3_29,                  !- Layer 2
-    1_2_9,                   !- Layer 3
-    1_1_37;                  !- Layer 4
-
-Construction,
-    6,                       !- Name
-    5_4_66,                  !- Outside Layer
-    5_3_11,                  !- Layer 2
-    5_2_103,                 !- Layer 3
-    5_1_5;                   !- Layer 4
-
-Construction,
-    8,                       !- Name
-    7_1_108;                 !- Outside Layer
-
-Construction,
     ceiling-const,           !- Name
     3_1_36,                  !- Outside Layer
     3_2_20,                  !- Layer 2
@@ -1873,7 +1765,7 @@ Construction,
 Construction,
     floor-const,             !- Name
     3_5_113,                 !- Outside Layer
-    4_RVAL_2,                !- Layer 2
+    3_RVAL_4,                !- Layer 2
     3_3_8,                   !- Layer 3
     3_2_20,                  !- Layer 4
     3_1_36;                  !- Layer 5
@@ -1881,10 +1773,6 @@ Construction,
 Construction,
     glazing-base,            !- Name
     Simple present glazing - 1001;  !- Outside Layer
-
-Construction,
-    LinearBridgingConstruction,  !- Name
-    LinearBridgingLayer;     !- Outside Layer
 
 Construction,
     roof-const,              !- Name
@@ -3367,5 +3255,6 @@ OutputControl:ReportingTolerances,
 !-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DIAGNOSTICS ===========
 
 Output:Diagnostics,
-    DisplayAdvancedReportVariables;  !- Key 1
+    DisplayUnusedSchedules;  !- Key 1
+
 
