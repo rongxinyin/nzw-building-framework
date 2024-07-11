@@ -1,14 +1,8 @@
-!-Generator IDFEditor 1.53
-!-Option SortedOrder
-
-!-NOTE: All comments with '!-' are ignored by the IDFEditor and are generated automatically.
-!-      Use '!' comments if they need to be retained when using the IDFEditor.
-
 
 !-   ===========  ALL OBJECTS IN CLASS: VERSION ===========
 
 Version,
-    23.2;                    !- Version Identifier
+    24.1;                    !- Version Identifier
 
 
 !-   ===========  ALL OBJECTS IN CLASS: SIMULATIONCONTROL ===========
@@ -300,98 +294,9 @@ ScheduleTypeLimits,
     availability;            !- Unit Type
 
 
-  Schedule:Compact,
-    BA_shower_sch,           !- Name
-    any number,              !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 1:00,0.00194740740740741, !- Field 3
-    Until: 2:00,0.000885185185185185, !- Field 5
-    Until: 3:00,0.000531111111111111, !- Field 7
-    Until: 4:00,0.000885185185185185, !- Field 9
-    Until: 5:00,0.00247851851851852, !- Field 11
-    Until: 6:00,0.00920592592592592, !- Field 13
-    Until: 7:00,0.0208903703703704, !- Field 15
-    Until: 8:00,0.0207133333333333, !- Field 17
-    Until: 9:00,0.0168185185185185, !- Field 19
-    Until: 10:00,0.0131007407407407, !- Field 21
-    Until: 11:00,0.0106222222222222, !- Field 23
-    Until: 12:00,0.00832074074074074, !- Field 25
-    Until: 13:00,0.00601925925925926, !- Field 27
-    Until: 14:00,0.00513407407407407, !- Field 29
-    Until: 15:00,0.00460296296296296, !- Field 31
-    Until: 16:00,0.00442592592592593, !- Field 33
-    Until: 17:00,0.00531111111111111, !- Field 35
-    Until: 18:00,0.00690444444444444, !- Field 37
-    Until: 19:00,0.00743555555555556, !- Field 39
-    Until: 20:00,0.00743555555555556, !- Field 41
-    Until: 21:00,0.00743555555555556, !- Field 43
-    Until: 22:00,0.00725851851851852, !- Field 45
-    Until: 23:00,0.00513407407407407, !- Field 47
-    Until: 24:00,0.00371777777777778; !- Field 49
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:DAY:HOURLY ===========
 
-  Schedule:Compact,
-    BA_bath_sch,             !- Name
-    any number,              !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 1:00,0.000181818181818182, !- Field 3
-    Until: 2:00,9.09090909090909e-05, !- Field 5
-    Until: 3:00,9.09090909090909e-05, !- Field 7
-    Until: 4:00,9.09090909090909e-05, !- Field 9
-    Until: 5:00,0.000181818181818182, !- Field 11
-    Until: 6:00,0.000431818181818182, !- Field 13
-    Until: 7:00,0.00104545454545455, !- Field 15
-    Until: 8:00,0.00131818181818182, !- Field 17
-    Until: 9:00,0.0015,      !- Field 19
-    Until: 10:00,0.00131818181818182, !- Field 21
-    Until: 11:00,0.00104545454545455, !- Field 23
-    Until: 12:00,0.000795454545454545, !- Field 25
-    Until: 13:00,0.000704545454545454, !- Field 27
-    Until: 14:00,0.000522727272727273, !- Field 29
-    Until: 15:00,0.000522727272727273, !- Field 31
-    Until: 16:00,0.000522727272727273, !- Field 33
-    Until: 17:00,0.000886363636363636, !- Field 35
-    Until: 18:00,0.00104545454545455, !- Field 37
-    Until: 19:00,0.00175,    !- Field 39
-    Until: 20:00,0.00227272727272727, !- Field 41
-    Until: 21:00,0.00227272727272727, !- Field 43
-    Until: 22:00,0.00175,    !- Field 45
-    Until: 23:00,0.0015,     !- Field 47
-    Until: 24:00,0.000886363636363636; !- Field 49
-
-  Schedule:Compact,
-    BA_sink_sch,             !- Name
-    any number,              !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 1:00,0.0043187134502924, !- Field 3
-    Until: 2:00,0.0021593567251462, !- Field 5
-    Until: 3:00,0.00154239766081871, !- Field 7
-    Until: 4:00,0.00154239766081871, !- Field 9
-    Until: 5:00,0.0021593567251462, !- Field 11
-    Until: 6:00,0.00555263157894737, !- Field 13
-    Until: 7:00,0.0129561403508772, !- Field 15
-    Until: 8:00,0.019125730994152, !- Field 17
-    Until: 9:00,0.020359649122807, !- Field 19
-    Until: 10:00,0.019125730994152, !- Field 21
-    Until: 11:00,0.0166578947368421, !- Field 23
-    Until: 12:00,0.0154239766081871, !- Field 25
-    Until: 13:00,0.0151154970760234, !- Field 27
-    Until: 14:00,0.0138815789473684, !- Field 29
-    Until: 15:00,0.0132646198830409, !- Field 31
-    Until: 16:00,0.0126476608187135, !- Field 33
-    Until: 17:00,0.0148070175438597, !- Field 35
-    Until: 18:00,0.0200511695906433, !- Field 37
-    Until: 19:00,0.0231359649122807, !- Field 39
-    Until: 20:00,0.0212850877192982, !- Field 41
-    Until: 21:00,0.0175833333333333, !- Field 43
-    Until: 22:00,0.0148070175438597, !- Field 45
-    Until: 23:00,0.0123391812865497, !- Field 47
-    Until: 24:00,0.00832894736842105; !- Field 49
-
-
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     RefrigeratorDay,         !- Name
     Fraction,                !- Schedule Type Limits Name
     0.8,                     !- Hour 1
@@ -419,7 +324,7 @@ ScheduleTypeLimits,
     0.885714285714286,       !- Hour 23
     0.828571428571429;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     MiscPlugLoadDay,         !- Name
     Fraction,                !- Schedule Type Limits Name
     0.607490272373541,       !- Hour 1
@@ -447,7 +352,7 @@ ScheduleTypeLimits,
     0.845168612191959,       !- Hour 23
     0.73443579766537;        !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     CookingRangeDay,         !- Name
     Fraction,                !- Schedule Type Limits Name
     0.04715848452508,        !- Hour 1
@@ -475,7 +380,7 @@ ScheduleTypeLimits,
     0.103721985058698,       !- Hour 23
     0.0707043756670224;      !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     DishwasherWeekday,       !- Name
     Fraction,                !- Schedule Type Limits Name
     0.129162158913331,       !- Hour 1
@@ -503,7 +408,7 @@ ScheduleTypeLimits,
     0.373266017550187,       !- Hour 23
     0.258408462555596;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     DishwasherWeekend,       !- Name
     Fraction,                !- Schedule Type Limits Name
     0.13838802740714,        !- Hour 1
@@ -531,7 +436,7 @@ ScheduleTypeLimits,
     0.399927875946628,       !- Hour 23
     0.276866209880995;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     DishwasherVacation,      !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -559,7 +464,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesWasherWeekday,    !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0887931470412736,      !- Hour 1
@@ -587,7 +492,7 @@ ScheduleTypeLimits,
     0.302029794593282,       !- Hour 23
     0.159903718761693;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesWasherWeekend,    !- Name
     Fraction,                !- Schedule Type Limits Name
     0.108629913933473,       !- Hour 1
@@ -615,7 +520,7 @@ ScheduleTypeLimits,
     0.36950453593859,        !- Hour 23
     0.195626889974413;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesWasherVacation,   !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -643,7 +548,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesDryerWeekday,     !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0996818663838815,      !- Hour 1
@@ -671,7 +576,7 @@ ScheduleTypeLimits,
     0.438600212089077,       !- Hour 23
     0.239236479321316;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesDryerWeekend,     !- Name
     Fraction,                !- Schedule Type Limits Name
     0.121951219512195,       !- Hour 1
@@ -699,7 +604,7 @@ ScheduleTypeLimits,
     0.536585365853659,       !- Hour 23
     0.292682926829268;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ClothesDryerVacation,    !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -727,7 +632,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     SinksWeekday,            !- Name
     Fraction,                !- Schedule Type Limits Name
     0.178431090172197,       !- Hour 1
@@ -755,7 +660,7 @@ ScheduleTypeLimits,
     0.499758265270435,       !- Hour 23
     0.342622976114552;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     SinksWeekend,            !- Name
     Fraction,                !- Schedule Type Limits Name
     0.18935544263172,        !- Hour 1
@@ -783,7 +688,7 @@ ScheduleTypeLimits,
     0.53035571008291,        !- Hour 23
     0.363599893019524;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     SinksVacation,           !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -811,7 +716,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ShowersWeekday,          !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0847763225038272,      !- Hour 1
@@ -839,7 +744,7 @@ ScheduleTypeLimits,
     0.231388558144809,       !- Hour 23
     0.165821851788853;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ShowersWeekend,          !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0908317741112434,      !- Hour 1
@@ -867,7 +772,7 @@ ScheduleTypeLimits,
     0.24791631229801,        !- Hour 23
     0.177666269773771;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     ShowersVacation,         !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -895,7 +800,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     BathsWeekday,            !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0549341075342269,      !- Hour 1
@@ -923,7 +828,7 @@ ScheduleTypeLimits,
     0.467011072211311,       !- Hour 23
     0.274741695841516;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     BathsWeekend,            !- Name
     Fraction,                !- Schedule Type Limits Name
     0.0769077505479179,      !- Hour 1
@@ -951,7 +856,7 @@ ScheduleTypeLimits,
     0.653815501095836,       !- Hour 23
     0.384638374178123;       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     BathsVacation,           !- Name
     Fraction,                !- Schedule Type Limits Name
     0,                       !- Hour 1
@@ -979,7 +884,7 @@ ScheduleTypeLimits,
     0,                       !- Hour 23
     0;                       !- Hour 24
 
-  Schedule:Day:Hourly,
+Schedule:Day:Hourly,
     DHWDistDay,              !- Name
     Fraction,                !- Schedule Type Limits Name
     0.142553149370226,       !- Hour 1
@@ -1007,22 +912,25 @@ ScheduleTypeLimits,
     0.464292318119835,       !- Hour 23
     0.299867724445383;       !- Hour 24
 
-  Schedule:Week:Compact,
+
+!-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:WEEK:COMPACT ===========
+
+Schedule:Week:Compact,
     RefrigeratorWeek,        !- Name
     For: AllDays,            !- DayType List 1
     RefrigeratorDay;         !- Schedule:Day Name 1
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     MiscPlugLoadWeek,        !- Name
     For: AllDays,            !- DayType List 1
     MiscPlugLoadDay;         !- Schedule:Day Name 1
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     CookingRangeWeek,        !- Name
     For: AllDays,            !- DayType List 1
     CookingRangeDay;         !- Schedule:Day Name 1
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     DishwasherWeek,          !- Name
     For: Weekdays,           !- DayType List 1
     DishwasherWeekday,       !- Schedule:Day Name 1
@@ -1031,7 +939,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     DishwasherWeekend;       !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     ClothesWasherWeek,       !- Name
     For: Weekdays,           !- DayType List 1
     ClothesWasherWeekday,    !- Schedule:Day Name 1
@@ -1040,7 +948,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     ClothesWasherWeekend;    !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     ClothesDryerWeek,        !- Name
     For: Weekdays,           !- DayType List 1
     ClothesDryerWeekday,     !- Schedule:Day Name 1
@@ -1049,7 +957,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     ClothesDryerWeekend;     !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     SinksWeek,               !- Name
     For: Weekdays,           !- DayType List 1
     SinksWeekday,            !- Schedule:Day Name 1
@@ -1058,7 +966,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     SinksWeekend;            !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     ShowersWeek,             !- Name
     For: Weekdays,           !- DayType List 1
     ShowersWeekday,          !- Schedule:Day Name 1
@@ -1067,7 +975,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     ShowersWeekend;          !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     BathsWeek,               !- Name
     For: Weekdays,           !- DayType List 1
     BathsWeekday,            !- Schedule:Day Name 1
@@ -1076,7 +984,7 @@ ScheduleTypeLimits,
     For: AllOtherDays,       !- DayType List 3
     BathsWeekend;            !- Schedule:Day Name 3
 
-  Schedule:Week:Compact,
+Schedule:Week:Compact,
     DHWDistWeek,             !- Name
     For: AllDays,            !- DayType List 1
     DHWDistDay;              !- Schedule:Day Name 1
@@ -1084,7 +992,7 @@ ScheduleTypeLimits,
 
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:YEAR ===========
 
-  Schedule:Year,
+Schedule:Year,
     Refrigerator,            !- Name
     Fraction,                !- Schedule Type Limits Name
     RefrigeratorWeek,        !- Schedule:Week Name 1
@@ -1093,7 +1001,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     MiscPlugLoad,            !- Name
     Fraction,                !- Schedule Type Limits Name
     MiscPlugLoadWeek,        !- Schedule:Week Name 1
@@ -1102,7 +1010,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     CookingRange,            !- Name
     Fraction,                !- Schedule Type Limits Name
     CookingRangeWeek,        !- Schedule:Week Name 1
@@ -1111,7 +1019,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     Dishwasher,              !- Name
     Fraction,                !- Schedule Type Limits Name
     DishwasherWeek,          !- Schedule:Week Name 1
@@ -1120,7 +1028,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     ClothesWasher,           !- Name
     Fraction,                !- Schedule Type Limits Name
     ClothesWasherWeek,       !- Schedule:Week Name 1
@@ -1129,7 +1037,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     ClothesDryer,            !- Name
     Fraction,                !- Schedule Type Limits Name
     ClothesDryerWeek,        !- Schedule:Week Name 1
@@ -1138,7 +1046,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     Sinks,                   !- Name
     Fraction,                !- Schedule Type Limits Name
     SinksWeek,               !- Schedule:Week Name 1
@@ -1147,7 +1055,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     Showers,                 !- Name
     Fraction,                !- Schedule Type Limits Name
     ShowersWeek,             !- Schedule:Week Name 1
@@ -1156,7 +1064,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     Baths,                   !- Name
     Fraction,                !- Schedule Type Limits Name
     BathsWeek,               !- Schedule:Week Name 1
@@ -1165,7 +1073,7 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
-  Schedule:Year,
+Schedule:Year,
     DHWDist,                 !- Name
     Fraction,                !- Schedule Type Limits Name
     DHWDistWeek,             !- Schedule:Week Name 1
@@ -1174,7 +1082,170 @@ ScheduleTypeLimits,
     12,                      !- End Month 1
     31;                      !- End Day 1
 
+
 !-   ===========  ALL OBJECTS IN CLASS: SCHEDULE:COMPACT ===========
+
+Schedule:Compact,
+    BA_shower_sch,           !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,             !- Field 3
+    0.00194740740740741,     !- Field 4
+    Until: 2:00,             !- Field 5
+    0.000885185185185185,    !- Field 6
+    Until: 3:00,             !- Field 7
+    0.000531111111111111,    !- Field 8
+    Until: 4:00,             !- Field 9
+    0.000885185185185185,    !- Field 10
+    Until: 5:00,             !- Field 11
+    0.00247851851851852,     !- Field 12
+    Until: 6:00,             !- Field 13
+    0.00920592592592592,     !- Field 14
+    Until: 7:00,             !- Field 15
+    0.0208903703703704,      !- Field 16
+    Until: 8:00,             !- Field 17
+    0.0207133333333333,      !- Field 18
+    Until: 9:00,             !- Field 19
+    0.0168185185185185,      !- Field 20
+    Until: 10:00,            !- Field 21
+    0.0131007407407407,      !- Field 22
+    Until: 11:00,            !- Field 23
+    0.0106222222222222,      !- Field 24
+    Until: 12:00,            !- Field 25
+    0.00832074074074074,     !- Field 26
+    Until: 13:00,            !- Field 27
+    0.00601925925925926,     !- Field 28
+    Until: 14:00,            !- Field 29
+    0.00513407407407407,     !- Field 30
+    Until: 15:00,            !- Field 31
+    0.00460296296296296,     !- Field 32
+    Until: 16:00,            !- Field 33
+    0.00442592592592593,     !- Field 34
+    Until: 17:00,            !- Field 35
+    0.00531111111111111,     !- Field 36
+    Until: 18:00,            !- Field 37
+    0.00690444444444444,     !- Field 38
+    Until: 19:00,            !- Field 39
+    0.00743555555555556,     !- Field 40
+    Until: 20:00,            !- Field 41
+    0.00743555555555556,     !- Field 42
+    Until: 21:00,            !- Field 43
+    0.00743555555555556,     !- Field 44
+    Until: 22:00,            !- Field 45
+    0.00725851851851852,     !- Field 46
+    Until: 23:00,            !- Field 47
+    0.00513407407407407,     !- Field 48
+    Until: 24:00,            !- Field 49
+    0.00371777777777778;     !- Field 50
+
+Schedule:Compact,
+    BA_bath_sch,             !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,             !- Field 3
+    0.000181818181818182,    !- Field 4
+    Until: 2:00,             !- Field 5
+    9.09090909090909e-05,    !- Field 6
+    Until: 3:00,             !- Field 7
+    9.09090909090909e-05,    !- Field 8
+    Until: 4:00,             !- Field 9
+    9.09090909090909e-05,    !- Field 10
+    Until: 5:00,             !- Field 11
+    0.000181818181818182,    !- Field 12
+    Until: 6:00,             !- Field 13
+    0.000431818181818182,    !- Field 14
+    Until: 7:00,             !- Field 15
+    0.00104545454545455,     !- Field 16
+    Until: 8:00,             !- Field 17
+    0.00131818181818182,     !- Field 18
+    Until: 9:00,             !- Field 19
+    0.0015,                  !- Field 20
+    Until: 10:00,            !- Field 21
+    0.00131818181818182,     !- Field 22
+    Until: 11:00,            !- Field 23
+    0.00104545454545455,     !- Field 24
+    Until: 12:00,            !- Field 25
+    0.000795454545454545,    !- Field 26
+    Until: 13:00,            !- Field 27
+    0.000704545454545454,    !- Field 28
+    Until: 14:00,            !- Field 29
+    0.000522727272727273,    !- Field 30
+    Until: 15:00,            !- Field 31
+    0.000522727272727273,    !- Field 32
+    Until: 16:00,            !- Field 33
+    0.000522727272727273,    !- Field 34
+    Until: 17:00,            !- Field 35
+    0.000886363636363636,    !- Field 36
+    Until: 18:00,            !- Field 37
+    0.00104545454545455,     !- Field 38
+    Until: 19:00,            !- Field 39
+    0.00175,                 !- Field 40
+    Until: 20:00,            !- Field 41
+    0.00227272727272727,     !- Field 42
+    Until: 21:00,            !- Field 43
+    0.00227272727272727,     !- Field 44
+    Until: 22:00,            !- Field 45
+    0.00175,                 !- Field 46
+    Until: 23:00,            !- Field 47
+    0.0015,                  !- Field 48
+    Until: 24:00,            !- Field 49
+    0.000886363636363636;    !- Field 50
+
+Schedule:Compact,
+    BA_sink_sch,             !- Name
+    any number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 1:00,             !- Field 3
+    0.0043187134502924,      !- Field 4
+    Until: 2:00,             !- Field 5
+    0.0021593567251462,      !- Field 6
+    Until: 3:00,             !- Field 7
+    0.00154239766081871,     !- Field 8
+    Until: 4:00,             !- Field 9
+    0.00154239766081871,     !- Field 10
+    Until: 5:00,             !- Field 11
+    0.0021593567251462,      !- Field 12
+    Until: 6:00,             !- Field 13
+    0.00555263157894737,     !- Field 14
+    Until: 7:00,             !- Field 15
+    0.0129561403508772,      !- Field 16
+    Until: 8:00,             !- Field 17
+    0.019125730994152,       !- Field 18
+    Until: 9:00,             !- Field 19
+    0.020359649122807,       !- Field 20
+    Until: 10:00,            !- Field 21
+    0.019125730994152,       !- Field 22
+    Until: 11:00,            !- Field 23
+    0.0166578947368421,      !- Field 24
+    Until: 12:00,            !- Field 25
+    0.0154239766081871,      !- Field 26
+    Until: 13:00,            !- Field 27
+    0.0151154970760234,      !- Field 28
+    Until: 14:00,            !- Field 29
+    0.0138815789473684,      !- Field 30
+    Until: 15:00,            !- Field 31
+    0.0132646198830409,      !- Field 32
+    Until: 16:00,            !- Field 33
+    0.0126476608187135,      !- Field 34
+    Until: 17:00,            !- Field 35
+    0.0148070175438597,      !- Field 36
+    Until: 18:00,            !- Field 37
+    0.0200511695906433,      !- Field 38
+    Until: 19:00,            !- Field 39
+    0.0231359649122807,      !- Field 40
+    Until: 20:00,            !- Field 41
+    0.0212850877192982,      !- Field 42
+    Until: 21:00,            !- Field 43
+    0.0175833333333333,      !- Field 44
+    Until: 22:00,            !- Field 45
+    0.0148070175438597,      !- Field 46
+    Until: 23:00,            !- Field 47
+    0.0123391812865497,      !- Field 48
+    Until: 24:00,            !- Field 49
+    0.00832894736842105;     !- Field 50
 
 Schedule:Compact,
     Hot_Water_Temperature,   !- Name
@@ -1204,45 +1275,45 @@ Schedule:Compact,
     Lighting Sch,            !- Name
     Fraction,                !- Schedule Type Limits Name
     Through: 31 Dec,         !- Field 1
-    For: Weekdays Saturday Sunday Holidays,           !- Field 2
+    For: Weekdays Saturday Sunday Holidays,  !- Field 2
     Until: 04:00,            !- Field 3
-    0.0625,                    !- Field 4
-    Until: 05:00,            !- Field 3
-    0.1875,                    !- Field 4
-    Until: 06:00,            !- Field 3
-    0.390625,                    !- Field 4
-    Until: 07:00,            !- Field 3
-    0.4375,                    !- Field 4
-    Until: 08:00,            !- Field 3
-    0.390625,                    !- Field 4
-    Until: 09:00,            !- Field 3
-    0.171875,                    !- Field 4
-    Until: 15:00,            !- Field 3
-    0.1171875,                    !- Field 4
-    Until: 16:00,            !- Field 3
-    0.203125,                    !- Field 4
-    Until: 17:00,            !- Field 3
-    0.4375,                    !- Field 4
-    Until: 18:00,            !- Field 3
-    0.609375,                    !- Field 4
-    Until: 19:00,            !- Field 3
-    0.8203125,                    !- Field 4
-    Until: 20:00,            !- Field 3
-    0.984375,                    !- Field 4
-    Until: 21:00,            !- Field 3
-    1.0,                    !- Field 4
-    Until: 22:00,            !- Field 5
-    0.6875,                    !- Field 6
-    Until: 23:00,            !- Field 7
-    0.3828125,                    !- Field 8
-    Until: 24:00,            !- Field 9
-    0.15625,                    !- Field 10
-    For: SummerDesignDay,    !- Field 29
-    Until: 24:00,            !- Field 30
-    1,                       !- Field 31
-    For: AllOtherDays,       !- Field 32
+    0.0625,                  !- Field 4
+    Until: 05:00,            !- Field 5
+    0.1875,                  !- Field 6
+    Until: 06:00,            !- Field 7
+    0.390625,                !- Field 8
+    Until: 07:00,            !- Field 9
+    0.4375,                  !- Field 10
+    Until: 08:00,            !- Field 11
+    0.390625,                !- Field 12
+    Until: 09:00,            !- Field 13
+    0.171875,                !- Field 14
+    Until: 15:00,            !- Field 15
+    0.1171875,               !- Field 16
+    Until: 16:00,            !- Field 17
+    0.203125,                !- Field 18
+    Until: 17:00,            !- Field 19
+    0.4375,                  !- Field 20
+    Until: 18:00,            !- Field 21
+    0.609375,                !- Field 22
+    Until: 19:00,            !- Field 23
+    0.8203125,               !- Field 24
+    Until: 20:00,            !- Field 25
+    0.984375,                !- Field 26
+    Until: 21:00,            !- Field 27
+    1.0,                     !- Field 28
+    Until: 22:00,            !- Field 29
+    0.6875,                  !- Field 30
+    Until: 23:00,            !- Field 31
+    0.3828125,               !- Field 32
     Until: 24:00,            !- Field 33
-    0;                       !- Field 34
+    0.15625,                 !- Field 34
+    For: SummerDesignDay,    !- Field 35
+    Until: 24:00,            !- Field 36
+    1,                       !- Field 37
+    For: AllOtherDays,       !- Field 38
+    Until: 24:00,            !- Field 39
+    0;                       !- Field 40
 
 Schedule:Compact,
     People Sch,              !- Name
@@ -1254,63 +1325,63 @@ Schedule:Compact,
     Until: 07:00,            !- Field 5
     1.00,                    !- Field 6
     Until: 08:00,            !- Field 7
-    0.88310,                    !- Field 8
+    0.88310,                 !- Field 8
     Until: 09:00,            !- Field 9
-    0.40861,                    !- Field 10
+    0.40861,                 !- Field 10
     Until: 16:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 17:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 18:00,            !- Field 13
-    0.55310,                    !- Field 14
-    Until: 21:00,            !- Field 15
-    0.89693,                    !- Field 16
-    Until: 24:00,            !- Field 17
-    1.00,                    !- Field 18
-    For: Saturday,           !- Field 19
-    Until: 05:00,            !- Field 3
-    1.00,                    !- Field 4
-    Until: 07:00,            !- Field 5
-    1.00,                    !- Field 6
-    Until: 08:00,            !- Field 7
-    0.88310,                    !- Field 8
-    Until: 09:00,            !- Field 9
-    0.40861,                    !- Field 10
-    Until: 16:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 17:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 18:00,            !- Field 13
-    0.55310,                    !- Field 14
-    Until: 21:00,            !- Field 15
-    0.89693,                    !- Field 16
-    Until: 24:00,            !- Field 17
-    1.00,                    !- Field 18
-    For: Sunday Holidays,    !- Field 36
-    Until: 05:00,            !- Field 3
-    1.00,                    !- Field 4
-    Until: 07:00,            !- Field 5
-    1.00,                    !- Field 6
-    Until: 08:00,            !- Field 7
-    0.88310,                    !- Field 8
-    Until: 09:00,            !- Field 9
-    0.40861,                    !- Field 10
-    Until: 16:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 17:00,            !- Field 11
-    0.24189,                    !- Field 12
-    Until: 18:00,            !- Field 13
-    0.55310,                    !- Field 14
-    Until: 21:00,            !- Field 15
-    0.89693,                    !- Field 16
-    Until: 24:00,            !- Field 17
-    1.00,                    !- Field 18
-    For: SummerDesignDay,    !- Field 53
-    Until: 24:00,            !- Field 54
-    1,                       !- Field 55
-    For: AllOtherDays,       !- Field 56
+    0.24189,                 !- Field 12
+    Until: 17:00,            !- Field 13
+    0.24189,                 !- Field 14
+    Until: 18:00,            !- Field 15
+    0.55310,                 !- Field 16
+    Until: 21:00,            !- Field 17
+    0.89693,                 !- Field 18
+    Until: 24:00,            !- Field 19
+    1.00,                    !- Field 20
+    For: Saturday,           !- Field 21
+    Until: 05:00,            !- Field 22
+    1.00,                    !- Field 23
+    Until: 07:00,            !- Field 24
+    1.00,                    !- Field 25
+    Until: 08:00,            !- Field 26
+    0.88310,                 !- Field 27
+    Until: 09:00,            !- Field 28
+    0.40861,                 !- Field 29
+    Until: 16:00,            !- Field 30
+    0.24189,                 !- Field 31
+    Until: 17:00,            !- Field 32
+    0.24189,                 !- Field 33
+    Until: 18:00,            !- Field 34
+    0.55310,                 !- Field 35
+    Until: 21:00,            !- Field 36
+    0.89693,                 !- Field 37
+    Until: 24:00,            !- Field 38
+    1.00,                    !- Field 39
+    For: Sunday Holidays,    !- Field 40
+    Until: 05:00,            !- Field 41
+    1.00,                    !- Field 42
+    Until: 07:00,            !- Field 43
+    1.00,                    !- Field 44
+    Until: 08:00,            !- Field 45
+    0.88310,                 !- Field 46
+    Until: 09:00,            !- Field 47
+    0.40861,                 !- Field 48
+    Until: 16:00,            !- Field 49
+    0.24189,                 !- Field 50
+    Until: 17:00,            !- Field 51
+    0.24189,                 !- Field 52
+    Until: 18:00,            !- Field 53
+    0.55310,                 !- Field 54
+    Until: 21:00,            !- Field 55
+    0.89693,                 !- Field 56
     Until: 24:00,            !- Field 57
-    0;                       !- Field 58
+    1.00,                    !- Field 58
+    For: SummerDesignDay,    !- Field 59
+    Until: 24:00,            !- Field 60
+    1,                       !- Field 61
+    For: AllOtherDays,       !- Field 62
+    Until: 24:00,            !- Field 63
+    0;                       !- Field 64
 
 Schedule:Compact,
     Activity Schedule People,!- Name
@@ -1369,14 +1440,14 @@ Schedule:Compact,
     4;                       !- Field 4
 
 Schedule:Compact,
-    189 Heating Setpoint Schedule,  !- Name
+    Heating Setpoint Schedule,  !- Name
     Temperature,             !- Schedule Type Limits Name
     Through: 31 Dec,         !- Field 1
     For: Weekdays SummerDesignDay,  !- Field 2
     Until: 09:00,            !- Field 3
     20,                      !- Field 4
     Until: 20:00,            !- Field 5
-    13,                      !- Field 6
+    20,                      !- Field 6
     Until: 24:00,            !- Field 7
     20,                      !- Field 8
     For: WinterDesignDay,    !- Field 9
@@ -1386,14 +1457,14 @@ Schedule:Compact,
     Until: 09:00,            !- Field 13
     20,                      !- Field 14
     Until: 20:00,            !- Field 15
-    13,                      !- Field 16
+    20,                      !- Field 16
     Until: 24:00,            !- Field 17
     20,                      !- Field 18
     For: Holidays,           !- Field 19
     Until: 09:00,            !- Field 20
     20,                      !- Field 21
     Until: 20:00,            !- Field 22
-    13,                      !- Field 23
+    20,                      !- Field 23
     Until: 24:00,            !- Field 24
     20,                      !- Field 25
     For: AllOtherDays,       !- Field 26
@@ -1401,7 +1472,7 @@ Schedule:Compact,
     -50;                     !- Field 28
 
 Schedule:Compact,
-    189 Cooling SP Sch,      !- Name
+    Cooling Setpoint Schedule,      !- Name
     Temperature,             !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
@@ -1409,15 +1480,15 @@ Schedule:Compact,
     100;                     !- Field 4
 
 Schedule:Compact,
-    189 Cooling Availability Sch,  !- Name
-    OnOff,                        !- Schedule Type Limits Name
+    Cooling Availability Sch,  !- Name
+    OnOff,                   !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until: 24:00,            !- Field 3
     0;                       !- Field 4
 
 Schedule:Compact,
-    189 Heating Availability Sch,  !- Name
+    Heating Availability Sch,  !- Name
     Temperature,             !- Schedule Type Limits Name
     Through: 31 Dec,         !- Field 1
     For: Weekdays SummerDesignDay,  !- Field 2
@@ -1449,24 +1520,8 @@ Schedule:Compact,
     0;                       !- Field 28
 
 Schedule:Compact,
-    DHW Mains Temperature 189,  !- Name
-    Temperature,             !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 24:00,            !- Field 3
-    10;                      !- Field 4
-
-Schedule:Compact,
-    DHW Supply Temperature 189,  !- Name
-    Temperature,             !- Schedule Type Limits Name
-    Through: 12/31,          !- Field 1
-    For: AllDays,            !- Field 2
-    Until: 24:00,            !- Field 3
-    65;                      !- Field 4
-
-Schedule:Compact,
     Off,                     !- Name
-    OnOff,                        !- Schedule Type Limits Name
+    OnOff,                   !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
     Until: 24:00,            !- Field 3
@@ -1481,7 +1536,7 @@ Schedule:Compact,
     1;                       !- Field 4
 
 Schedule:Compact,
-    ALWAYS_AVAIL,                      !- Name
+    ALWAYS_AVAIL,            !- Name
     OnOff,                   !- Schedule Type Limits Name
     Through: 12/31,          !- Field 1
     For: AllDays,            !- Field 2
@@ -1510,12 +1565,12 @@ Schedule:Compact,
 Schedule:Constant,
     DWWaterTempSchedule,     !- Name
     Temperature,             !- Schedule Type Limits Name
-    47;        !- Hourly Value
+    47;                      !- Hourly Value
 
 Schedule:Constant,
     CWWaterTempSchedule,     !- Name
     Temperature,             !- Schedule Type Limits Name
-    47;        !- Hourly Value
+    47;                      !- Hourly Value
 
 Schedule:Constant,
     SSBWaterTempSchedule,    !- Name
@@ -2290,7 +2345,7 @@ People,
     Activity Schedule People,!- Activity Level Schedule Name
     3.82e-08,                !- Carbon Dioxide Generation Rate {m3/s-W}
     Yes,                     !- Enable ASHRAE 55 Comfort Warnings
-    ZoneAveraged,            !- Mean Radiant Temperature Calculation Type
+    EnclosureAveraged,       !- Mean Radiant Temperature Calculation Type
     ,                        !- Surface Name/Angle Factor List Name
     Work efficiency,         !- Work Efficiency Schedule Name
     ,                        !- Clothing Insulation Calculation Method
@@ -2307,13 +2362,165 @@ Lights,
     Lighting Sch,            !- Schedule Name
     Watts/Area,              !- Design Level Calculation Method
     ,                        !- Lighting Level {W}
-    15,                      !- Watts per Zone Floor Area {W/m2}
+    15,                      !- Watts per Floor Area {W/m2}
     ,                        !- Watts per Person {W/person}
     0,                       !- Return Air Fraction
     0.42,                    !- Fraction Radiant
     0.18,                    !- Fraction Visible
     1,                       !- Fraction Replaceable
     ELECTRIC EQUIPMENT#189#GeneralLights;  !- End-Use Subcategory
+
+
+!-   ===========  ALL OBJECTS IN CLASS: ELECTRICEQUIPMENT ===========
+
+ElectricEquipment,
+    dishwasher1,             !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    DishWasher,              !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    65.698787492023,         !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.15,                    !- Fraction Latent
+    0.6,                     !- Fraction Radiant
+    0.25,                    !- Fraction Lost
+    dishwasher;              !- End-Use Subcategory
+
+ElectricEquipment,
+    refrigerator1,           !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    Refrigerator,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    91.0575745202123,        !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    1,                       !- Fraction Radiant
+    0,                       !- Fraction Lost
+    refrigerator;            !- End-Use Subcategory
+
+ElectricEquipment,
+    clotheswasher1,          !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    ClothesWasher,           !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    28.4784377542718,        !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    0.8,                     !- Fraction Radiant
+    0.2,                     !- Fraction Lost
+    clotheswasher;           !- End-Use Subcategory
+
+ElectricEquipment,
+    gas_dryer1,              !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    ClothesDryer,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    19.4182189334014,        !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    1,                       !- Fraction Radiant
+    0,                       !- Fraction Lost
+    gas_dryer;               !- End-Use Subcategory
+
+ElectricEquipment,
+    gas_range1,              !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    CookingRange,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0,                       !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    1,                       !- Fraction Radiant
+    0,                       !- Fraction Lost
+    gas_range;               !- End-Use Subcategory
+
+ElectricEquipment,
+    television1,             !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    Lighting Sch,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    0,                       !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0,                       !- Fraction Latent
+    1,                       !- Fraction Radiant
+    0,                       !- Fraction Lost
+    television;              !- End-Use Subcategory
+
+ElectricEquipment,
+    gas_mels1,               !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    MiscPlugLoad,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    507.14979757085,         !- Design Level {W}
+    ,                        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.06,                    !- Fraction Latent
+    0.69,                    !- Fraction Radiant
+    0.25,                    !- Fraction Lost
+    gas_mels;                !- End-Use Subcategory
+
+ElectricEquipment,
+    IECC_Adj1,               !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    MiscPlugLoad,            !- Schedule Name
+    Watts/Area,              !- Design Level Calculation Method
+    ,                        !- Design Level {W}
+    2.28876261216595,        !- Watts per Floor Area {W/m2}
+    ,                        !- Watts per Person {W/person}
+    0.0624390461422629,      !- Fraction Latent
+    0.41190936353998,        !- Fraction Radiant
+    0.251045347957769,       !- Fraction Lost
+    IECC_adj;                !- End-Use Subcategory
+
+
+!-   ===========  ALL OBJECTS IN CLASS: GASEQUIPMENT ===========
+
+GasEquipment,
+    gas_dryer1,              !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    ClothesDryer,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    395.595891809135,        !- Design Level {W}
+    ,                        !- Power per Floor Area {W/m2}
+    ,                        !- Power per Person {W/person}
+    0.05,                    !- Fraction Latent
+    0.1,                     !- Fraction Radiant
+    0.85,                    !- Fraction Lost
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    gas_dryer;               !- End-Use Subcategory
+
+GasEquipment,
+    gas_range1,              !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    CookingRange,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    540.941345365053,        !- Design Level {W}
+    ,                        !- Power per Floor Area {W/m2}
+    ,                        !- Power per Person {W/person}
+    0.06,                    !- Fraction Latent
+    0.69,                    !- Fraction Radiant
+    0.25,                    !- Fraction Lost
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    gas_range;               !- End-Use Subcategory
+
+GasEquipment,
+    gas_mels1,               !- Name
+    Living_Unit,             !- Zone or ZoneList or Space or SpaceList Name
+    MiscPlugLoad,            !- Schedule Name
+    EquipmentLevel,          !- Design Level Calculation Method
+    61.125463562753,         !- Design Level {W}
+    ,                        !- Power per Floor Area {W/m2}
+    ,                        !- Power per Person {W/person}
+    0.06,                    !- Fraction Latent
+    0.69,                    !- Fraction Radiant
+    0.25,                    !- Fraction Lost
+    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
+    gas_mels;                !- End-Use Subcategory
 
 
 !-   ===========  ALL OBJECTS IN CLASS: OTHEREQUIPMENT ===========
@@ -2325,7 +2532,7 @@ OtherEquipment,
     Misc Sch,                !- Schedule Name
     Watts/Area,              !- Design Level Calculation Method
     ,                        !- Design Level {W}
-    13.03,                   !- Power per Zone Floor Area {W/m2}
+    13.03,                   !- Power per Floor Area {W/m2}
     ,                        !- Power per Person {W/person}
     0,                       !- Fraction Latent
     0.2,                     !- Fraction Radiant
@@ -2333,154 +2540,7 @@ OtherEquipment,
     ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
     General;                 !- End-Use Subcategory
 
-!- Process internal gains from the appliances.template..
 
-  ElectricEquipment,
-    dishwasher1,             !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    DishWasher,              !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    65.698787492023,         !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0.15,                    !- Fraction Latent
-    0.6,                     !- Fraction Radiant
-    0.25,                    !- Fraction Lost
-    dishwasher;              !- End-Use Subcategory
-
-  ElectricEquipment,
-    refrigerator1,           !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    Refrigerator,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    91.0575745202123,        !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0,                       !- Fraction Latent
-    1,                       !- Fraction Radiant
-    0,                       !- Fraction Lost
-    refrigerator;            !- End-Use Subcategory
-
-  ElectricEquipment,
-    clotheswasher1,          !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    ClothesWasher,           !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    28.4784377542718,        !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0,                       !- Fraction Latent
-    0.8,                     !- Fraction Radiant
-    0.2,                     !- Fraction Lost
-    clotheswasher;           !- End-Use Subcategory
-
-  GasEquipment,
-    gas_dryer1,              !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    ClothesDryer,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    395.595891809135,        !- Design Level {W}
-    ,                        !- Power per Zone Floor Area {W/m2}
-    ,                        !- Power per Person {W/person}
-    0.05,                    !- Fraction Latent
-    0.1,                     !- Fraction Radiant
-    0.85,                    !- Fraction Lost
-    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
-    gas_dryer;               !- End-Use Subcategory
-
-  ElectricEquipment,
-    gas_dryer1,              !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    ClothesDryer,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    19.4182189334014,        !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0,                       !- Fraction Latent
-    1,                       !- Fraction Radiant
-    0,                       !- Fraction Lost
-    gas_dryer;               !- End-Use Subcategory
-
-  GasEquipment,
-    gas_range1,              !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    CookingRange,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    540.941345365053,        !- Design Level {W}
-    ,                        !- Power per Zone Floor Area {W/m2}
-    ,                        !- Power per Person {W/person}
-    0.06,                    !- Fraction Latent
-    0.69,                    !- Fraction Radiant
-    0.25,                    !- Fraction Lost
-    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
-    gas_range;               !- End-Use Subcategory
-
-  ElectricEquipment,
-    gas_range1,              !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    CookingRange,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    0,                       !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0,                       !- Fraction Latent
-    1,                       !- Fraction Radiant
-    0,                       !- Fraction Lost
-    gas_range;               !- End-Use Subcategory
-
-  ElectricEquipment,
-    television1,             !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    Lighting Sch,        !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    0,                       !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0,                       !- Fraction Latent
-    1,                       !- Fraction Radiant
-    0,                       !- Fraction Lost
-    television;              !- End-Use Subcategory
-
-  GasEquipment,
-    gas_mels1,               !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    MiscPlugLoad,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    61.125463562753,         !- Design Level {W}
-    ,                        !- Power per Zone Floor Area {W/m2}
-    ,                        !- Power per Person {W/person}
-    0.06,                    !- Fraction Latent
-    0.69,                    !- Fraction Radiant
-    0.25,                    !- Fraction Lost
-    ,                        !- Carbon Dioxide Generation Rate {m3/s-W}
-    gas_mels;                !- End-Use Subcategory
-
-  ElectricEquipment,
-    gas_mels1,               !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    MiscPlugLoad,            !- Schedule Name
-    EquipmentLevel,          !- Design Level Calculation Method
-    507.14979757085,         !- Design Level {W}
-    ,                        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0.06,                    !- Fraction Latent
-    0.69,                    !- Fraction Radiant
-    0.25,                    !- Fraction Lost
-    gas_mels;                !- End-Use Subcategory
-
-  ElectricEquipment,
-    IECC_Adj1,               !- Name
-    Living_Unit,            !- Zone or ZoneList or Space or SpaceList Name
-    MiscPlugLoad,            !- Schedule Name
-    Watts/Area,              !- Design Level Calculation Method
-    ,                        !- Design Level {W}
-    2.28876261216595,        !- Watts per Zone Floor Area {W/m2}
-    ,                        !- Watts per Person {W/person}
-    0.0624390461422629,      !- Fraction Latent
-    0.41190936353998,        !- Fraction Radiant
-    0.251045347957769,       !- Fraction Lost
-    IECC_adj;                !- End-Use Subcategory
-    
 !-   ===========  ALL OBJECTS IN CLASS: ZONEINFILTRATION:DESIGNFLOWRATE ===========
 
 ZoneInfiltration:DesignFlowRate,
@@ -2603,7 +2663,7 @@ ZoneControl:Thermostat,
     Living_Unit,             !- Zone or ZoneList Name
     Living_Unit Thermostat Schedule,  !- Control Type Schedule Name
     ThermostatSetpoint:DualSetpoint,  !- Control 1 Object Type
-    Dual Setpoint - Zone 189,!- Control 1 Name
+    Dual Setpoint - Living Unit,!- Control 1 Name
     ,                        !- Control 2 Object Type
     ,                        !- Control 2 Name
     ,                        !- Control 3 Object Type
@@ -2616,9 +2676,9 @@ ZoneControl:Thermostat,
 !-   ===========  ALL OBJECTS IN CLASS: THERMOSTATSETPOINT:DUALSETPOINT ===========
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone 189,!- Name
-    189 Heating Setpoint Schedule,  !- Heating Setpoint Temperature Schedule Name
-    189 Cooling SP Sch;      !- Cooling Setpoint Temperature Schedule Name
+    Dual Setpoint - Living Unit,!- Name
+    Heating Setpoint Schedule,  !- Heating Setpoint Temperature Schedule Name
+    Cooling Setpoint Schedule;      !- Cooling Setpoint Temperature Schedule Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: ZONEHVAC:BASEBOARD:RADIANTCONVECTIVE:WATER:DESIGN ===========
@@ -3409,11 +3469,5 @@ OutputControl:Table:Style,
 OutputControl:ReportingTolerances,
     1.11,                    !- Tolerance for Time Heating Setpoint Not Met {deltaC}
     1.11;                    !- Tolerance for Time Cooling Setpoint Not Met {deltaC}
-
-
-!-   ===========  ALL OBJECTS IN CLASS: OUTPUT:DIAGNOSTICS ===========
-
-Output:Diagnostics,
-    DisplayUnusedSchedules;  !- Key 1
 
 
