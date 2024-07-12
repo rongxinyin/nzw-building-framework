@@ -3133,6 +3133,223 @@ Boiler:HotWater,
     General,                 !- End-Use Subcategory
     0;                       !- Off Cycle Parasitic Fuel Load {W}
 
+!************** Scheduled Heat Pump Water Heater Inputs ***********************
+!  Heating Capacity as a Function of Temperature Curve (Air Wet-bulb T, Condenser Water Inlet T)
+!  Colmac HPA 2000 Air Source Heat Pump Water Heater
+!  Rating point: 29.4 C (85 F) Entering Air Dry-bulb Temperature
+!                22.2 C (72 F) Entering Air Wet-bulb Temperature
+!                56.7 C (132.2 F) Entering Condenser Water Temperature
+!  Capacity = 17028.6 W (58117 BTUH) water heating capacity
+!  COP      = 3.37 W/W (12.21 BTUH/W) water heating efficiency
+!
+
+  Curve:Biquadratic,
+    HPWHHeatingCapFTemp,     !- Name
+    0.369827,                !- Coefficient1 Constant
+    0.043341,                !- Coefficient2 x
+    -0.00023,                !- Coefficient3 x**2
+    0.000466,                !- Coefficient4 y
+    0.000026,                !- Coefficient5 y**2
+    -0.00027,                !- Coefficient6 x*y
+    0.0,                     !- Minimum Value of x
+    40.0,                    !- Maximum Value of x
+    20.0,                    !- Minimum Value of y
+    90.0,                    !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+  Curve:Biquadratic,
+    HPWHHeatingCOPFTemp,     !- Name
+    1.19713,                 !- Coefficient1 Constant
+    0.077849,                !- Coefficient2 x
+    -0.0000016,              !- Coefficient3 x**2
+    -0.02675,                !- Coefficient4 y
+    0.000296,                !- Coefficient5 y**2
+    -0.00112,                !- Coefficient6 x*y
+    0.0,                     !- Minimum Value of x
+    40.0,                    !- Maximum Value of x
+    20.0,                    !- Minimum Value of y
+    90.0,                    !- Maximum Value of y
+    ,                        !- Minimum Curve Output
+    ,                        !- Maximum Curve Output
+    Temperature,             !- Input Unit Type for X
+    Temperature,             !- Input Unit Type for Y
+    Dimensionless;           !- Output Unit Type
+
+  Curve:Quadratic,
+    HPWHPLFFPLR,             !- Name
+    0.75,                    !- Coefficient1 Constant
+    0.25,                    !- Coefficient2 x
+    0.0,                     !- Coefficient3 x**2
+    0.0,                     !- Minimum Value of x
+    1.0;                     !- Maximum Value of x
+
+  Schedule:Compact,
+    HeatPumpWaterHeaterSch,  !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0;        !- Field 3
+
+  Schedule:Compact,
+    HPWHTempSch,             !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,60.0;       !- Field 3
+
+  Schedule:Compact,
+    ScheduledHPWHSch,        !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,1.0;        !- Field 3
+
+  Schedule:Compact,
+    ScheduledAmbientTemp,    !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,19.72222;   !- Field 3
+
+  Schedule:Compact,
+    ScheduledAmbientRH,      !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,0.5;        !- Field 3
+
+  Schedule:Compact,
+    ScheduledCompressorTemp, !- Name
+    Any Number,              !- Schedule Type Limits Name
+    Through: 12/31,          !- Field 1
+    For: AllDays,            !- Field 2
+    Until: 24:00,21.0;       !- Field 3
+
+  WaterHeater:HeatPump:PumpedCondenser,
+    ScheduledHeatPumpWaterHeater,  !- Name
+    ScheduledHPWHSch,        !- Availability Schedule Name
+    HPWHTempSch,             !- Compressor Setpoint Temperature Schedule Name
+    2.0,                     !- Dead Band Temperature Difference {deltaC}
+    HPScheduledWaterInletNode,  !- Condenser Water Inlet Node Name
+    HPScheduledWaterOutletNode,  !- Condenser Water Outlet Node Name
+    0.00016,                 !- Condenser Water Flow Rate {m3/s}
+    0.2685,                  !- Evaporator Air Flow Rate {m3/s}
+    Schedule,                !- Inlet Air Configuration
+    HPScheduledAirInletNode, !- Air Inlet Node Name
+    HPScheduledAirOutletNode,!- Air Outlet Node Name
+    ,                        !- Outdoor Air Node Name
+    ,                        !- Exhaust Air Node Name
+    ScheduledAmbientTemp,    !- Inlet Air Temperature Schedule Name
+    ScheduledAmbientRH,      !- Inlet Air Humidity Schedule Name
+    ,                        !- Inlet Air Zone Name
+    WaterHeater:Mixed,       !- Tank Object Type
+    HPWHScheduledTank,       !- Tank Name
+    ,                        !- Tank Use Side Inlet Node Name
+    ,                        !- Tank Use Side Outlet Node Name
+    Coil:WaterHeating:AirToWaterHeatPump:Pumped,  !- DX Coil Object Type
+    HPWHScheduledDXCoil,     !- DX Coil Name
+    11.0,                    !- Minimum Inlet Air Temperature for Compressor Operation {C}
+    ,                        !- Maximum Inlet Air Temperature for Compressor Operation {C}
+    Schedule,                !- Compressor Location
+    ScheduledCompressorTemp, !- Compressor Ambient Temperature Schedule Name
+    Fan:SystemModel,         !- Fan Object Type
+    HPWHScheduledFan,        !- Fan Name
+    BlowThrough,             !- Fan Placement
+    ,                        !- On Cycle Parasitic Electric Load {W}
+    ,                        !- Off Cycle Parasitic Electric Load {W}
+    ;                        !- Parasitic Heat Rejection Location
+
+  WaterHeater:Mixed,
+    HPWHScheduledTank,       !- Name
+    0.3785,                  !- Tank Volume {m3}
+    dhw_setpt,  !- Setpoint Temperature Schedule Name
+    2.0,                     !- Deadband Temperature Difference {deltaC}
+    82.2222,                 !- Maximum Temperature Limit {C}
+    CYCLE,                   !- Heater Control Type
+    5000,                    !- Heater Maximum Capacity {W}
+    0,                       !- Heater Minimum Capacity {W}
+    ,                        !- Heater Ignition Minimum Flow Rate {m3/s}
+    ,                        !- Heater Ignition Delay {s}
+    ELECTRICITY,             !- Heater Fuel Type
+    0.95,                    !- Heater Thermal Efficiency
+    ,                        !- Part Load Factor Curve Name
+    10,                      !- Off Cycle Parasitic Fuel Consumption Rate {W}
+    ELECTRICITY,             !- Off Cycle Parasitic Fuel Type
+    0,                       !- Off Cycle Parasitic Heat Fraction to Tank
+    30,                      !- On Cycle Parasitic Fuel Consumption Rate {W}
+    ELECTRICITY,             !- On Cycle Parasitic Fuel Type
+    0,                       !- On Cycle Parasitic Heat Fraction to Tank
+    SCHEDULE,                !- Ambient Temperature Indicator
+    ScheduledAmbientTemp,    !- Ambient Temperature Schedule Name
+    ,                        !- Ambient Temperature Zone Name
+    ,                        !- Ambient Temperature Outdoor Air Node Name
+    2.0,                     !- Off Cycle Loss Coefficient to Ambient Temperature {W/K}
+    1.0,                     !- Off Cycle Loss Fraction to Zone
+    2.0,                     !- On Cycle Loss Coefficient to Ambient Temperature {W/K}
+    1.0,                     !- On Cycle Loss Fraction to Zone
+    0.000379,                !- Peak Use Flow Rate {m3/s}
+    Hot Water Demand Schedule,  !- Use Flow Rate Fraction Schedule Name
+    ,                        !- Cold Water Supply Temperature Schedule Name
+    ,                        !- Use Side Inlet Node Name
+    ,                        !- Use Side Outlet Node Name
+    ,                        !- Use Side Effectiveness
+    Water Heater use inlet node_unit1,  !- Source Side Inlet Node Name
+    Water Heater use outlet node_unit1,  !- Source Side Outlet Node Name
+    0.95;                    !- Source Side Effectiveness
+
+  Coil:WaterHeating:AirToWaterHeatPump:Pumped,
+    HPWHScheduledDXCoil,     !- Name
+    4000.0,                  !- Rated Heating Capacity {W}
+    3.2,                     !- Rated COP {W/W}
+    0.736,                   !- Rated Sensible Heat Ratio
+    29.44,                   !- Rated Evaporator Inlet Air Dry-Bulb Temperature {C}
+    22.22,                   !- Rated Evaporator Inlet Air Wet-Bulb Temperature {C}
+    55.72,                   !- Rated Condenser Inlet Water Temperature {C}
+    0.2685,                  !- Rated Evaporator Air Flow Rate {m3/s}
+    0.00016,                 !- Rated Condenser Water Flow Rate {m3/s}
+    Yes,                     !- Evaporator Fan Power Included in Rated COP
+    No,                      !- Condenser Pump Power Included in Rated COP
+    No,                      !- Condenser Pump Heat Included in Rated Heating Capacity and Rated COP
+    125.0,                   !- Condenser Water Pump Power {W}
+    0.1,                     !- Fraction of Condenser Pump Heat to Water
+    HPScheduledFanAirOutletNode,  !- Evaporator Air Inlet Node Name
+    HPScheduledAirOutletNode,!- Evaporator Air Outlet Node Name
+    Water Heater use outlet node_unit1,  !- Condenser Water Inlet Node Name
+    Water Heater use inlet node_unit1,  !- Condenser Water Outlet Node Name
+    120.0,                   !- Crankcase Heater Capacity {W}
+    ,                        !- Crankcase Heater Capacity Function of Temperature Curve Name
+    5.0,                     !- Maximum Ambient Temperature for Crankcase Heater Operation {C}
+    WetBulbTemperature,      !- Evaporator Air Temperature Type for Curve Objects
+    HPWHHeatingCapFTemp,     !- Heating Capacity Function of Temperature Curve Name
+    ,                        !- Heating Capacity Function of Air Flow Fraction Curve Name
+    ,                        !- Heating Capacity Function of Water Flow Fraction Curve Name
+    HPWHHeatingCOPFTemp,     !- Heating COP Function of Temperature Curve Name
+    ,                        !- Heating COP Function of Air Flow Fraction Curve Name
+    ,                        !- Heating COP Function of Water Flow Fraction Curve Name
+    HPWHPLFFPLR;             !- Part Load Fraction Correlation Curve Name
+
+  Fan:SystemModel,
+    HPWHScheduledFan,        !- Name
+    ScheduledHPWHSch,        !- Availability Schedule Name
+    HPScheduledAirInletNode, !- Air Inlet Node Name
+    HPScheduledFanAirOutletNode,  !- Air Outlet Node Name
+    0.2685,                  !- Design Maximum Air Flow Rate {m3/s}
+    Discrete,                !- Speed Control Method
+    0.0,                     !- Electric Power Minimum Flow Rate Fraction
+    100.0,                   !- Design Pressure Rise {Pa}
+    0.9,                     !- Motor Efficiency
+    1.0,                     !- Motor In Air Stream Fraction
+    AUTOSIZE,                !- Design Electric Power Consumption {W}
+    TotalEfficiencyAndPressure,  !- Design Power Sizing Method
+    ,                        !- Electric Power Per Unit Flow Rate {W/(m3/s)}
+    ,                        !- Electric Power Per Unit Flow Rate Per Unit Pressure {W/((m3/s)-Pa)}
+    0.70;                    !- Fan Total Efficiency
+
+!*************** End of Scheduled Heat Pump Water Heater Inputs *****************
 
 !-   ===========  ALL OBJECTS IN CLASS: WATERHEATER:MIXED ===========
 
