@@ -2884,7 +2884,7 @@ Branch,
     Water Heater Branch_unit1,  !- Name
     ,                        !- Pressure Drop Curve Name
     WaterHeater:Mixed,       !- Component 1 Object Type
-    Water Heater_unit1,      !- Component 1 Name
+    HPWHScheduledTank_unit1,      !- Component 1 Name
     Water Heater Use Inlet Node_unit1,  !- Component 1 Inlet Node Name
     Water Heater Use Outlet Node_unit1;  !- Component 1 Outlet Node Name
 
@@ -3234,8 +3234,8 @@ Boiler:HotWater,
     ScheduledHPWHSch,        !- Availability Schedule Name
     HPWHTempSch,             !- Compressor Setpoint Temperature Schedule Name
     2.0,                     !- Dead Band Temperature Difference {deltaC}
-    HPScheduledWaterInletNode,  !- Condenser Water Inlet Node Name
-    HPScheduledWaterOutletNode,  !- Condenser Water Outlet Node Name
+    Water Heater use outlet node_unit1,  !- Condenser Water Inlet Node Name
+    Water Heater use inlet node_unit1,  !- Condenser Water Outlet Node Name
     0.00016,                 !- Condenser Water Flow Rate {m3/s}
     0.2685,                  !- Evaporator Air Flow Rate {m3/s}
     Schedule,                !- Inlet Air Configuration
@@ -3247,7 +3247,7 @@ Boiler:HotWater,
     ScheduledAmbientRH,      !- Inlet Air Humidity Schedule Name
     ,                        !- Inlet Air Zone Name
     WaterHeater:Mixed,       !- Tank Object Type
-    HPWHScheduledTank,       !- Tank Name
+    HPWHScheduledTank_unit1,       !- Tank Name
     ,                        !- Tank Use Side Inlet Node Name
     ,                        !- Tank Use Side Outlet Node Name
     Coil:WaterHeating:AirToWaterHeatPump:Pumped,  !- DX Coil Object Type
@@ -3264,7 +3264,7 @@ Boiler:HotWater,
     ;                        !- Parasitic Heat Rejection Location
 
   WaterHeater:Mixed,
-    HPWHScheduledTank,       !- Name
+    HPWHScheduledTank_unit1,       !- Name
     0.3785,                  !- Tank Volume {m3}
     dhw_setpt,  !- Setpoint Temperature Schedule Name
     2.0,                     !- Deadband Temperature Difference {deltaC}
@@ -3291,8 +3291,8 @@ Boiler:HotWater,
     1.0,                     !- Off Cycle Loss Fraction to Zone
     2.0,                     !- On Cycle Loss Coefficient to Ambient Temperature {W/K}
     1.0,                     !- On Cycle Loss Fraction to Zone
-    0.000379,                !- Peak Use Flow Rate {m3/s}
-    Hot Water Demand Schedule,  !- Use Flow Rate Fraction Schedule Name
+    0,                !- Peak Use Flow Rate {m3/s}
+    ,  !- Use Flow Rate Fraction Schedule Name
     ,                        !- Cold Water Supply Temperature Schedule Name
     ,                        !- Use Side Inlet Node Name
     ,                        !- Use Side Outlet Node Name
@@ -3351,54 +3351,54 @@ Boiler:HotWater,
 
 !*************** End of Scheduled Heat Pump Water Heater Inputs *****************
 
-!-   ===========  ALL OBJECTS IN CLASS: WATERHEATER:MIXED ===========
-
-WaterHeater:Mixed,
-    Water Heater_unit1,      !- Name
-    0.15141644,              !- Tank Volume {m3}
-    dhw_setpt,               !- Setpoint Temperature Schedule Name
-    2,                       !- Deadband Temperature Difference {deltaC}
-    50,                      !- Maximum Temperature Limit {C}
-    Cycle,                   !- Heater Control Type
-    autosize,                !- Heater Maximum Capacity {W}
-    0,                       !- Heater Minimum Capacity {W}
-    0,                       !- Heater Ignition Minimum Flow Rate {m3/s}
-    ,                        !- Heater Ignition Delay {s}
-    NaturalGas,              !- Heater Fuel Type
-    0.8,                     !- Heater Thermal Efficiency
-    ,                        !- Part Load Factor Curve Name
-    ,                        !- Off Cycle Parasitic Fuel Consumption Rate {W}
-    ,                        !- Off Cycle Parasitic Fuel Type
-    ,                        !- Off Cycle Parasitic Heat Fraction to Tank
-    ,                        !- On Cycle Parasitic Fuel Consumption Rate {W}
-    ,                        !- On Cycle Parasitic Fuel Type
-    ,                        !- On Cycle Parasitic Heat Fraction to Tank
-    Zone,                    !- Ambient Temperature Indicator
-    ,                        !- Ambient Temperature Schedule Name
-    Living_Unit,             !- Ambient Temperature Zone Name
-    ,                        !- Ambient Temperature Outdoor Air Node Name
-    6.27714230487778,        !- Off Cycle Loss Coefficient to Ambient Temperature {W/K}
-    1,                       !- Off Cycle Loss Fraction to Zone
-    6.27714230487778,        !- On Cycle Loss Coefficient to Ambient Temperature {W/K}
-    1,                       !- On Cycle Loss Fraction to Zone
-    0,                       !- Peak Use Flow Rate {m3/s}
-    ,                        !- Use Flow Rate Fraction Schedule Name
-    ,                        !- Cold Water Supply Temperature Schedule Name
-    Water Heater use inlet node_unit1,  !- Use Side Inlet Node Name
-    Water Heater use outlet node_unit1,  !- Use Side Outlet Node Name
-    1,                       !- Use Side Effectiveness
-    ,                        !- Source Side Inlet Node Name
-    ,                        !- Source Side Outlet Node Name
-    1,                       !- Source Side Effectiveness
-    autosize,                !- Use Side Design Flow Rate {m3/s}
-    0,                       !- Source Side Design Flow Rate {m3/s}
-    1.5;                     !- Indirect Water Heating Recovery Time {hr}
+!!-   ===========  ALL OBJECTS IN CLASS: WATERHEATER:MIXED ===========
+!
+!WaterHeater:Mixed,
+!    HPWHScheduledTank_unit1,      !- Name
+!    0.15141644,              !- Tank Volume {m3}
+!    dhw_setpt,               !- Setpoint Temperature Schedule Name
+!    2,                       !- Deadband Temperature Difference {deltaC}
+!    50,                      !- Maximum Temperature Limit {C}
+!    Cycle,                   !- Heater Control Type
+!    autosize,                !- Heater Maximum Capacity {W}
+!    0,                       !- Heater Minimum Capacity {W}
+!    0,                       !- Heater Ignition Minimum Flow Rate {m3/s}
+!    ,                        !- Heater Ignition Delay {s}
+!    NaturalGas,              !- Heater Fuel Type
+!    0.8,                     !- Heater Thermal Efficiency
+!    ,                        !- Part Load Factor Curve Name
+!    ,                        !- Off Cycle Parasitic Fuel Consumption Rate {W}
+!    ,                        !- Off Cycle Parasitic Fuel Type
+!    ,                        !- Off Cycle Parasitic Heat Fraction to Tank
+!    ,                        !- On Cycle Parasitic Fuel Consumption Rate {W}
+!    ,                        !- On Cycle Parasitic Fuel Type
+!    ,                        !- On Cycle Parasitic Heat Fraction to Tank
+!    Zone,                    !- Ambient Temperature Indicator
+!    ,                        !- Ambient Temperature Schedule Name
+!    Living_Unit,             !- Ambient Temperature Zone Name
+!    ,                        !- Ambient Temperature Outdoor Air Node Name
+!    6.27714230487778,        !- Off Cycle Loss Coefficient to Ambient Temperature {W/K}
+!    1,                       !- Off Cycle Loss Fraction to Zone
+!    6.27714230487778,        !- On Cycle Loss Coefficient to Ambient Temperature {W/K}
+!    1,                       !- On Cycle Loss Fraction to Zone
+!    0,                       !- Peak Use Flow Rate {m3/s}
+!    ,                        !- Use Flow Rate Fraction Schedule Name
+!    ,                        !- Cold Water Supply Temperature Schedule Name
+!    Water Heater use inlet node_unit1,  !- Use Side Inlet Node Name
+!    Water Heater use outlet node_unit1,  !- Use Side Outlet Node Name
+!    1,                       !- Use Side Effectiveness
+!    ,                        !- Source Side Inlet Node Name
+!    ,                        !- Source Side Outlet Node Name
+!    1,                       !- Source Side Effectiveness
+!    autosize,                !- Use Side Design Flow Rate {m3/s}
+!    0,                       !- Source Side Design Flow Rate {m3/s}
+!    1.5;                     !- Indirect Water Heating Recovery Time {hr}
 
 
 !-   ===========  ALL OBJECTS IN CLASS: WATERHEATER:SIZING ===========
 
 WaterHeater:Sizing,
-    Water Heater_unit1,      !- WaterHeater Name
+    HPWHScheduledTank_unit1,      !- WaterHeater Name
     ResidentialHUD-FHAMinimum,  !- Design Mode
     ,                        !- Time Storage Can Meet Peak Draw {hr}
     ,                        !- Time for Tank Recovery {hr}
@@ -3465,7 +3465,7 @@ PlantEquipmentList,
 PlantEquipmentList,
     DHW Plant Equipment_unit1,  !- Name
     WaterHeater:Mixed,       !- Equipment 1 Object Type
-    Water Heater_unit1;      !- Equipment 1 Name
+    HPWHScheduledTank_unit1;      !- Equipment 1 Name
 
 
 !-   ===========  ALL OBJECTS IN CLASS: PLANTEQUIPMENTOPERATION:HEATINGLOAD ===========
