@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.15 14:44
+Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
 ! <Version>, Version ID
  Version, 24.1
 ! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
@@ -241,3 +241,9 @@ Environment:Special Days,EASTER MONDAY,Holiday,InputFile,04/10,  1
 Environment:Special Days,EASTER SUNDAY,Holiday,InputFile,04/02,  1
 Environment:Special Days,NEW YEARS DAY,Holiday,InputFile,01/02,  1
 Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,ATTIC,RunPeriod: DETACHED HOUSE ANNUAL,0.2195566127,0.1845977833,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,LIVING_UNIT,RunPeriod: DETACHED HOUSE ANNUAL,9.1742888450E-003,1.8194507615E-002,Pass,Pass,1.6561055575E-002,1.7314953855E-002,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

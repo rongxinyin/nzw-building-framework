@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.15 14:44,
+Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49,
    ************* Beginning Zone Sizing Calculations
    ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
    **   ~~~   ** Found first in surface=189_GROUNDFLOOR_0_0_0
@@ -7,16 +7,14 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.15 14:44,
    **   ~~~   ** If schedules are specified for air velocity, clothing insulation, and/or work efficiency but no thermal comfort
    **   ~~~   ** thermal comfort model is selected, the schedules will be listed as unused schedules in the .err file.
    **   ~~~   ** To avoid these errors, select a valid thermal comfort model or eliminate these schedules in the PEOPLE input.
-   ** Warning ** Node used as an inlet more than once: WATER HEATER USE INLET NODE_UNIT1
-   **   ~~~   **   Used by: Branch, name=WATER HEATER BRANCH_UNIT1
-   **   ~~~   **   as inlet for: WaterHeater:Mixed, name=HPWHSCHEDULEDTANK_UNIT1
-   **   ~~~   **   and  by     : WATERHEATER:HEATPUMP:PUMPEDCONDENSER, name=SCHEDULEDHEATPUMPWATERHEATER
-   **   ~~~   **   as inlet for: WATERHEATER:MIXED, name=HPWHSCHEDULEDTANK_UNIT1
-   ** Warning ** Node used as an outlet more than once: WATER HEATER USE OUTLET NODE_UNIT1
-   **   ~~~   **   Used by: Branch, name=WATER HEATER BRANCH_UNIT1
-   **   ~~~   **   as outlet for: WaterHeater:Mixed, name=HPWHSCHEDULEDTANK_UNIT1
-   **   ~~~   **   and  by     : WATERHEATER:HEATPUMP:PUMPEDCONDENSER, name=SCHEDULEDHEATPUMPWATERHEATER
-   **   ~~~   **   as outlet for: WATERHEATER:MIXED, name=HPWHSCHEDULEDTANK_UNIT1
+   ** Severe  ** WaterHeater:HeatPump:PumpedCondenser = SCHEDULEDHEATPUMPWATERHEATER:
+   **   ~~~   ** Heat Pump condenser water inlet node name does not match water heater tank source outlet node name.
+   **   ~~~   ** Heat pump condenser water inlet and outlet node names = HPPLANTWATERINLETNODE and HPPLANTWATEROUTLETNODE
+   **   ~~~   ** Water heater tank source side inlet and outlet node names      =  and 
+   ** Severe  ** WaterHeater:HeatPump:PumpedCondenser = SCHEDULEDHEATPUMPWATERHEATER:
+   **   ~~~   ** Heat Pump condenser water outlet node name does not match water heater tank source inlet node name.
+   **   ~~~   ** Heat pump condenser water inlet and outlet node names = HPPLANTWATERINLETNODE and HPPLANTWATEROUTLETNODE
+   **   ~~~   ** Water heater tank source side inlet and outlet node names      =  and 
    ** Warning ** Calculated design cooling load for zone=LIVING_UNIT is zero.
    **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
    ************* Beginning Plant Sizing Calculations
@@ -27,56 +25,23 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.15 14:44,
    ************* All Supply Air Paths passed integrity testing
    ************* Testing Individual Return Air Path Integrity
    ************* All Return Air Paths passed integrity testing
-   ** Severe  ** Node Connection Error, Node="WATER HEATER USE OUTLET NODE_UNIT1", The same node appears as a non-parent Inlet node more than once.
+   ** Severe  ** Node Connection Error, Node="HPPLANTWATERINLETNODE", Inlet node did not find an appropriate matching "outlet" node.
+   **   ~~~   ** If this is an outdoor air inlet node, it must be listed in an OutdoorAir:Node or OutdoorAir:NodeList object.
+   **   ~~~   ** Reference Object=WaterHeater:HeatPump:PumpedCondenser, Name=SCHEDULEDHEATPUMPWATERHEATER
+   ** Severe  ** Node Connection Error, Node="HPPLANTWATERINLETNODE", Inlet node did not find an appropriate matching "outlet" node.
+   **   ~~~   ** If this is an outdoor air inlet node, it must be listed in an OutdoorAir:Node or OutdoorAir:NodeList object.
    **   ~~~   ** Reference Object=Coil:WaterHeating:AirToWaterHeatPump:Pumped, Name=HPWHSCHEDULEDDXCOIL
-   **   ~~~   ** Reference Object=Connector:Mixer, Name=DHW SUPPLY MIXER_UNIT1
-   ** Severe  ** Node Connection Error, Node="WATER HEATER USE INLET NODE_UNIT1", The same node appears as a non-parent Outlet node more than once.
-   **   ~~~   ** Reference Object=Coil:WaterHeating:AirToWaterHeatPump:Pumped, Name=HPWHSCHEDULEDDXCOIL
-   **   ~~~   ** Reference Object=Connector:Splitter, Name=DHW SUPPLY SPLITTER_UNIT1
    ************* There were 2 node connection errors noted.
    ************* Beginning Simulation
-   ** Warning ** PlantSupplySide: PlantLoop="DHW LOOP_UNIT1", Error (CheckLoopExitNode) -- Mass Flow Rate Calculation. Outlet and Inlet differ by more than tolerance.
-   **   ~~~   **  Environment=DETACHED HOUSE ANNUAL, at Simulation time=01/01 00:00 - 00:15
-   **   ~~~   ** Loop inlet node=MAINS INLET NODE_UNIT1, flowrate=7.5245E-004 kg/s
-   **   ~~~   ** Loop outlet node=DHW SUPPLY OUTLET NODE_UNIT1, flowrate=0.0000 kg/s
-   **   ~~~   ** This loop might be helped by a bypass.
-   ** Severe  ** Plant flows do not resolve -- splitter inlet flow does not match mixer outlet flow 
-   **   ~~~   **  Environment=DETACHED HOUSE ANNUAL, at Simulation time=01/01 00:00 - 00:15
-   **   ~~~   ** PlantLoop name= DHW LOOP_UNIT1
-   **   ~~~   ** Plant Connector:Mixer name= DHW SUPPLY MIXER_UNIT1
-   **   ~~~   ** Mixer outlet mass flow rate= 0.000000 {kg/s}
-   **   ~~~   ** Plant Connector:Splitter name= DHW SUPPLY SPLITTER_UNIT1
-   **   ~~~   ** Splitter inlet mass flow rate= 7.524529E-004 {kg/s}
-   **   ~~~   ** Difference in two mass flow rates= 7.524529E-004 {kg/s}
-   ** Severe  ** Plant flows do not resolve -- splitter inlet flow does not match mixer outlet flow 
-   **   ~~~   **  Environment=DETACHED HOUSE ANNUAL, at Simulation time=01/01 00:00 - 00:15
-   **   ~~~   ** PlantLoop name= DHW LOOP_UNIT1
-   **   ~~~   ** Plant Connector:Mixer name= DHW SUPPLY MIXER_UNIT1
-   **   ~~~   ** Mixer outlet mass flow rate= 0.000000 {kg/s}
-   **   ~~~   ** Plant Connector:Splitter name= DHW SUPPLY SPLITTER_UNIT1
-   **   ~~~   ** Splitter inlet mass flow rate= 7.524529E-004 {kg/s}
-   **   ~~~   ** Difference in two mass flow rates= 7.524529E-004 {kg/s}
-   **  Fatal  ** CheckPlantMixerSplitterConsistency: Simulation terminated because of problems in plant flow resolver
-   ...Summary of Errors that led to program termination:
-   ..... Reference severe error count=4
-   ..... Last severe error=Plant flows do not resolve -- splitter inlet flow does not match mixer outlet flow 
-   ** Warning ** There is no BYPASS component in the demand-side of PlantLoop =DHW LOOP_UNIT1
-   **   ~~~   ** You may be able to fix the fatal error above by adding a demand-side BYPASS PIPE.
-   *************
-   ************* ===== Recurring Error Summary =====
-   ************* The following recurring error messages occurred.
-   *************
-   *************  ** Warning ** PlantSupplySide: PlantLoop="DHW LOOP_UNIT1", Error -- Mass Flow Rate Calculation -- continues ** 
-   *************  **   ~~~   **   This error occurred 2 total times;
-   *************  **   ~~~   **   during Warmup 0 times;
-   *************  **   ~~~   **   during Sizing 0 times.
-   *************
-   *************  ** Severe  ** Plant Flows (Loop=DHW LOOP_UNIT1) splitter inlet flow not match mixer outlet flow
-   *************  **   ~~~   **   This error occurred 1 total times;
-   *************  **   ~~~   **   during Warmup 0 times;
-   *************  **   ~~~   **   during Sizing 0 times.
-   *************  **   ~~~   **   Max=0.000752 kg/s  Min=0.000752 kg/s
-   *************
+   ** Warning ** More than 4% of time (350.4 hours) uncomfortable in one or more zones 
+   **   ~~~   ** Based on ASHRAE 55-2004 graph (Section 5.2.1.1)
+   **   ~~~   ** During Environment [01/01/2006 - 12/31/2006]: DETACHED HOUSE ANNUAL
+   **   ~~~   ** 6975.3 hours were uncomfortable in zone: LIVING_UNIT
+   ************* Simulation Error Summary *************
+   ************* There are 15 unused schedules in input.
+   ************* There are 4 unused week schedules in input.
+   ************* There are 10 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
    *************
    ************* ===== Final Error Summary =====
    ************* The following error categories occurred.  Consider correcting or noting.
@@ -86,5 +51,5 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.15 14:44,
    ************* ..occurs in the expected input fields.
    *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
-   ************* EnergyPlus Sizing Error Summary. During Sizing: 5 Warning; 0 Severe Errors.
-   ************* EnergyPlus Terminated--Fatal Error Detected. 10 Warning; 4 Severe Errors; Elapsed Time=00hr 00min  0.23sec
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 3 Warning; 2 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 5 Warning; 4 Severe Errors; Elapsed Time=00hr 00min  4.08sec

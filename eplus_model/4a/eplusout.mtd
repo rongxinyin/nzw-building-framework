@@ -260,166 +260,166 @@
   OnMeter=PlantLoopHeatingDemand:HVAC [J]
   OnMeter=Baseboard:PlantLoopHeatingDemand [J]
 
- Meters for 1189,HPWHSCHEDULEDTANK_UNIT1:Water Heater Source Side Heat Transfer Energy [J]
-  OnMeter=PlantLoopHeatingDemand:Facility [J]
-  OnMeter=PlantLoopHeatingDemand:Plant [J]
-  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
-  OnMeter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J]
-
- Meters for 1202,HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy [J]
-  OnMeter=Electricity:Facility [J]
-  OnMeter=Electricity:Plant [J]
-  OnMeter=WaterSystems:Electricity [J]
-  OnMeter=Water Heater:WaterSystems:Electricity [J]
-
- Meters for 1215,HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy [J]
-  OnMeter=Electricity:Facility [J]
-  OnMeter=Electricity:Plant [J]
-  OnMeter=WaterSystems:Electricity [J]
-  OnMeter=Water Heater:WaterSystems:Electricity [J]
-
- Meters for 1216,HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy [J]
-  OnMeter=Electricity:Facility [J]
-  OnMeter=Electricity:Plant [J]
-  OnMeter=WaterSystems:Electricity [J]
-  OnMeter=Water Heater:WaterSystems:Electricity [J]
-
- Meters for 1217,HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume [m3]
-  OnMeter=Water:Facility [m3]
-  OnMeter=Water:Plant [m3]
-  OnMeter=WaterSystems:Water [m3]
-  OnMeter=Water Heater:WaterSystems:Water [m3]
-
- Meters for 1266,HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume [m3]
-  OnMeter=MainsWater:Facility [m3]
-  OnMeter=MainsWater:Plant [m3]
-  OnMeter=WaterSystems:MainsWater [m3]
-  OnMeter=Water Heater:WaterSystems:MainsWater [m3]
-
- Meters for 1315,SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy [J]
-  OnMeter=Electricity:Facility [J]
-  OnMeter=Electricity:Plant [J]
-  OnMeter=WaterSystems:Electricity [J]
-  OnMeter=Water Heater Parasitic:WaterSystems:Electricity [J]
-
- Meters for 1328,SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy [J]
-  OnMeter=Electricity:Facility [J]
-  OnMeter=Electricity:Plant [J]
-  OnMeter=WaterSystems:Electricity [J]
-  OnMeter=Water Heater Parasitic:WaterSystems:Electricity [J]
-
- Meters for 1329,CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume [m3]
+ Meters for 1189,CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Domestic Hot Water:WaterSystems:Water [m3]
 
- Meters for 1342,CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume [m3]
+ Meters for 1238,CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Domestic Hot Water:WaterSystems:MainsWater [m3]
 
- Meters for 1355,CLOTHES WASHER_UNIT1:Water Use Equipment Heating Energy [J]
+ Meters for 1287,CLOTHES WASHER_UNIT1:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=Domestic Hot Water:WaterSystems:EnergyTransfer [J]
 
- Meters for 1392,DISHWASHER_UNIT1:Water Use Equipment Total Volume [m3]
+ Meters for 1324,DISHWASHER_UNIT1:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Domestic Hot Water:WaterSystems:Water [m3]
 
- Meters for 1393,DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume [m3]
+ Meters for 1325,DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Domestic Hot Water:WaterSystems:MainsWater [m3]
 
- Meters for 1394,DISHWASHER_UNIT1:Water Use Equipment Heating Energy [J]
+ Meters for 1326,DISHWASHER_UNIT1:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=Domestic Hot Water:WaterSystems:EnergyTransfer [J]
 
- Meters for 1395,SINKS_UNIT1:Water Use Equipment Total Volume [m3]
+ Meters for 1327,SINKS_UNIT1:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Domestic Hot Water:WaterSystems:Water [m3]
 
- Meters for 1396,SINKS_UNIT1:Water Use Equipment Mains Water Volume [m3]
+ Meters for 1328,SINKS_UNIT1:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Domestic Hot Water:WaterSystems:MainsWater [m3]
 
- Meters for 1397,SINKS_UNIT1:Water Use Equipment Heating Energy [J]
+ Meters for 1329,SINKS_UNIT1:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=Domestic Hot Water:WaterSystems:EnergyTransfer [J]
 
- Meters for 1398,SHOWERS_UNIT1:Water Use Equipment Total Volume [m3]
+ Meters for 1330,SHOWERS_UNIT1:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Domestic Hot Water:WaterSystems:Water [m3]
 
- Meters for 1399,SHOWERS_UNIT1:Water Use Equipment Mains Water Volume [m3]
+ Meters for 1331,SHOWERS_UNIT1:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Domestic Hot Water:WaterSystems:MainsWater [m3]
 
- Meters for 1400,SHOWERS_UNIT1:Water Use Equipment Heating Energy [J]
+ Meters for 1332,SHOWERS_UNIT1:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=Domestic Hot Water:WaterSystems:EnergyTransfer [J]
 
- Meters for 1401,BATHS_UNIT1:Water Use Equipment Total Volume [m3]
+ Meters for 1333,BATHS_UNIT1:Water Use Equipment Total Volume [m3]
   OnMeter=Water:Facility [m3]
   OnMeter=Water:Plant [m3]
   OnMeter=WaterSystems:Water [m3]
   OnMeter=Domestic Hot Water:WaterSystems:Water [m3]
 
- Meters for 1402,BATHS_UNIT1:Water Use Equipment Mains Water Volume [m3]
+ Meters for 1334,BATHS_UNIT1:Water Use Equipment Mains Water Volume [m3]
   OnMeter=MainsWater:Facility [m3]
   OnMeter=MainsWater:Plant [m3]
   OnMeter=WaterSystems:MainsWater [m3]
   OnMeter=Domestic Hot Water:WaterSystems:MainsWater [m3]
 
- Meters for 1403,BATHS_UNIT1:Water Use Equipment Heating Energy [J]
+ Meters for 1335,BATHS_UNIT1:Water Use Equipment Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=WaterSystems:EnergyTransfer [J]
   OnMeter=Domestic Hot Water:WaterSystems:EnergyTransfer [J]
 
- Meters for 1404,BOILER HOT WATER 1:Boiler Heating Energy [J]
+ Meters for 1336,BOILER HOT WATER 1:Boiler Heating Energy [J]
   OnMeter=EnergyTransfer:Facility [J]
   OnMeter=EnergyTransfer:Plant [J]
   OnMeter=Boilers:EnergyTransfer [J]
 
- Meters for 1417,BOILER HOT WATER 1:Boiler NaturalGas Energy [J]
+ Meters for 1349,BOILER HOT WATER 1:Boiler NaturalGas Energy [J]
   OnMeter=NaturalGas:Facility [J]
   OnMeter=NaturalGas:Plant [J]
   OnMeter=Heating:NaturalGas [J]
   OnMeter=General:Heating:NaturalGas [J]
 
- Meters for 1454,BOILER HOT WATER 1:Boiler Ancillary Electricity Energy [J]
+ Meters for 1386,BOILER HOT WATER 1:Boiler Ancillary Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
   OnMeter=Electricity:Plant [J]
   OnMeter=Heating:Electricity [J]
   OnMeter=Boiler Parasitic:Heating:Electricity [J]
 
- Meters for 1479,BOILER HOT WATER 1:Boiler Ancillary NaturalGas Energy [J]
+ Meters for 1411,BOILER HOT WATER 1:Boiler Ancillary NaturalGas Energy [J]
   OnMeter=NaturalGas:Facility [J]
   OnMeter=NaturalGas:Plant [J]
   OnMeter=Heating:NaturalGas [J]
   OnMeter=Boiler Parasitic:Heating:NaturalGas [J]
+
+ Meters for 1424,HPWHSCHEDULEDTANK_UNIT1:Water Heater Source Side Heat Transfer Energy [J]
+  OnMeter=PlantLoopHeatingDemand:Facility [J]
+  OnMeter=PlantLoopHeatingDemand:Plant [J]
+  OnMeter=WaterSystems:PlantLoopHeatingDemand [J]
+  OnMeter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J]
+
+ Meters for 1437,HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=WaterSystems:Electricity [J]
+  OnMeter=Water Heater:WaterSystems:Electricity [J]
+
+ Meters for 1450,HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=WaterSystems:Electricity [J]
+  OnMeter=Water Heater:WaterSystems:Electricity [J]
+
+ Meters for 1451,HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=WaterSystems:Electricity [J]
+  OnMeter=Water Heater:WaterSystems:Electricity [J]
+
+ Meters for 1452,HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume [m3]
+  OnMeter=Water:Facility [m3]
+  OnMeter=Water:Plant [m3]
+  OnMeter=WaterSystems:Water [m3]
+  OnMeter=Water Heater:WaterSystems:Water [m3]
+
+ Meters for 1465,HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume [m3]
+  OnMeter=MainsWater:Facility [m3]
+  OnMeter=MainsWater:Plant [m3]
+  OnMeter=WaterSystems:MainsWater [m3]
+  OnMeter=Water Heater:WaterSystems:MainsWater [m3]
+
+ Meters for 1478,SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=WaterSystems:Electricity [J]
+  OnMeter=Water Heater Parasitic:WaterSystems:Electricity [J]
+
+ Meters for 1491,SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy [J]
+  OnMeter=Electricity:Facility [J]
+  OnMeter=Electricity:Plant [J]
+  OnMeter=WaterSystems:Electricity [J]
+  OnMeter=Water Heater Parasitic:WaterSystems:Electricity [J]
 
  Meters for 1492,PUMP VARIABLE SPEED 1:Pump Electricity Energy [J]
   OnMeter=Electricity:Facility [J]
@@ -458,12 +458,12 @@
   HPWHSCHEDULEDDXCOIL:Cooling Coil Crankcase Heater Electricity Energy
   HPWHSCHEDULEDDXCOIL:Cooling Coil Water Heating Electricity Energy
   HPWHSCHEDULEDFAN:Fan Electricity Energy
+  BOILER HOT WATER 1:Boiler Ancillary Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy
   SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy
   SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy
-  BOILER HOT WATER 1:Boiler Ancillary Electricity Energy
   PUMP VARIABLE SPEED 1:Pump Electricity Energy
   MAINS PRESSURE_UNIT1:Pump Electricity Energy
 
@@ -708,12 +708,12 @@
  For Meter=Electricity:Plant [J], ResourceType=Electricity, Group=Plant, contents are:
   HPWHSCHEDULEDDXCOIL:Cooling Coil Crankcase Heater Electricity Energy
   HPWHSCHEDULEDDXCOIL:Cooling Coil Water Heating Electricity Energy
+  BOILER HOT WATER 1:Boiler Ancillary Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy
   HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy
   SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy
   SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy
-  BOILER HOT WATER 1:Boiler Ancillary Electricity Energy
   PUMP VARIABLE SPEED 1:Pump Electricity Energy
   MAINS PRESSURE_UNIT1:Pump Electricity Energy
 
@@ -870,71 +870,29 @@
  For Meter=Baseboard:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=Baseboard, contents are:
   ZONE HVAC BASEBOARD RAD CONV WATER:Baseboard Hot Water Energy
 
- For Meter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Source Side Heat Transfer Energy
-
- For Meter=Water Heater:WaterSystems:Electricity [J], ResourceType=Electricity, EndUse=WaterSystems, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy
-
  For Meter=Water:Facility [m3], ResourceType=Water, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
   CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume
   DISHWASHER_UNIT1:Water Use Equipment Total Volume
   SINKS_UNIT1:Water Use Equipment Total Volume
   SHOWERS_UNIT1:Water Use Equipment Total Volume
   BATHS_UNIT1:Water Use Equipment Total Volume
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
 
  For Meter=Water:Plant [m3], ResourceType=Water, Group=Plant, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
   CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume
   DISHWASHER_UNIT1:Water Use Equipment Total Volume
   SINKS_UNIT1:Water Use Equipment Total Volume
   SHOWERS_UNIT1:Water Use Equipment Total Volume
   BATHS_UNIT1:Water Use Equipment Total Volume
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
 
  For Meter=WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
   CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume
   DISHWASHER_UNIT1:Water Use Equipment Total Volume
   SINKS_UNIT1:Water Use Equipment Total Volume
   SHOWERS_UNIT1:Water Use Equipment Total Volume
   BATHS_UNIT1:Water Use Equipment Total Volume
-
- For Meter=Water Heater:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
   HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
-
- For Meter=MainsWater:Facility [m3], ResourceType=MainsWater, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
-  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
-  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
-  SINKS_UNIT1:Water Use Equipment Mains Water Volume
-  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
-  BATHS_UNIT1:Water Use Equipment Mains Water Volume
-
- For Meter=MainsWater:Plant [m3], ResourceType=MainsWater, Group=Plant, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
-  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
-  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
-  SINKS_UNIT1:Water Use Equipment Mains Water Volume
-  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
-  BATHS_UNIT1:Water Use Equipment Mains Water Volume
-
- For Meter=WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
-  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
-  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
-  SINKS_UNIT1:Water Use Equipment Mains Water Volume
-  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
-  BATHS_UNIT1:Water Use Equipment Mains Water Volume
-
- For Meter=Water Heater:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
-  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
-
- For Meter=Water Heater Parasitic:WaterSystems:Electricity [J], ResourceType=Electricity, EndUse=WaterSystems, contents are:
-  SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy
-  SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy
 
  For Meter=Domestic Hot Water:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
   CLOTHES WASHER_UNIT1:Water Use Equipment Total Volume
@@ -942,6 +900,30 @@
   SINKS_UNIT1:Water Use Equipment Total Volume
   SHOWERS_UNIT1:Water Use Equipment Total Volume
   BATHS_UNIT1:Water Use Equipment Total Volume
+
+ For Meter=MainsWater:Facility [m3], ResourceType=MainsWater, contents are:
+  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
+  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
+  SINKS_UNIT1:Water Use Equipment Mains Water Volume
+  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
+  BATHS_UNIT1:Water Use Equipment Mains Water Volume
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
+
+ For Meter=MainsWater:Plant [m3], ResourceType=MainsWater, Group=Plant, contents are:
+  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
+  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
+  SINKS_UNIT1:Water Use Equipment Mains Water Volume
+  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
+  BATHS_UNIT1:Water Use Equipment Mains Water Volume
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
+
+ For Meter=WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
+  DISHWASHER_UNIT1:Water Use Equipment Mains Water Volume
+  SINKS_UNIT1:Water Use Equipment Mains Water Volume
+  SHOWERS_UNIT1:Water Use Equipment Mains Water Volume
+  BATHS_UNIT1:Water Use Equipment Mains Water Volume
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
 
  For Meter=Domestic Hot Water:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
   CLOTHES WASHER_UNIT1:Water Use Equipment Mains Water Volume
@@ -994,6 +976,24 @@
 
  For Meter=Boiler Parasitic:Heating:NaturalGas [J], ResourceType=NaturalGas, EndUse=Heating, contents are:
   BOILER HOT WATER 1:Boiler Ancillary NaturalGas Energy
+
+ For Meter=Water Heater:WaterSystems:PlantLoopHeatingDemand [J], ResourceType=PlantLoopHeatingDemand, EndUse=WaterSystems, contents are:
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Source Side Heat Transfer Energy
+
+ For Meter=Water Heater:WaterSystems:Electricity [J], ResourceType=Electricity, EndUse=WaterSystems, contents are:
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Electricity Energy
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Off Cycle Parasitic Electricity Energy
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater On Cycle Parasitic Electricity Energy
+
+ For Meter=Water Heater:WaterSystems:Water [m3], ResourceType=Water, EndUse=WaterSystems, contents are:
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Water Volume
+
+ For Meter=Water Heater:WaterSystems:MainsWater [m3], ResourceType=MainsWater, EndUse=WaterSystems, contents are:
+  HPWHSCHEDULEDTANK_UNIT1:Water Heater Mains Water Volume
+
+ For Meter=Water Heater Parasitic:WaterSystems:Electricity [J], ResourceType=Electricity, EndUse=WaterSystems, contents are:
+  SCHEDULEDHEATPUMPWATERHEATER:Water Heater Off Cycle Ancillary Electricity Energy
+  SCHEDULEDHEATPUMPWATERHEATER:Water Heater On Cycle Ancillary Electricity Energy
 
  For Meter=Pumps:Electricity [J], ResourceType=Electricity, EndUse=Pumps, contents are:
   PUMP VARIABLE SPEED 1:Pump Electricity Energy

@@ -2883,8 +2883,8 @@ Branch,
 Branch,
     Water Heater Branch_unit1,  !- Name
     ,                        !- Pressure Drop Curve Name
-    WaterHeater:Mixed,       !- Component 1 Object Type
-    HPWHScheduledTank_unit1,      !- Component 1 Name
+    WaterHeater:HeatPump:PumpedCondenser,  !- Component 1 Object Type
+    ScheduledHeatPumpWaterHeater,!- Component 1 Name
     Water Heater Use Inlet Node_unit1,  !- Component 1 Inlet Node Name
     Water Heater Use Outlet Node_unit1;  !- Component 1 Outlet Node Name
 
@@ -3234,8 +3234,8 @@ Boiler:HotWater,
     ScheduledHPWHSch,        !- Availability Schedule Name
     HPWHTempSch,             !- Compressor Setpoint Temperature Schedule Name
     2.0,                     !- Dead Band Temperature Difference {deltaC}
-    Water Heater use outlet node_unit1,  !- Condenser Water Inlet Node Name
-    Water Heater use inlet node_unit1,  !- Condenser Water Outlet Node Name
+    HPPlantWaterInletNode,   !- Condenser Water Inlet Node Name
+    HPPlantWaterOutletNode,  !- Condenser Water Outlet Node Name
     0.00016,                 !- Condenser Water Flow Rate {m3/s}
     0.2685,                  !- Evaporator Air Flow Rate {m3/s}
     Schedule,                !- Inlet Air Configuration
@@ -3248,8 +3248,8 @@ Boiler:HotWater,
     ,                        !- Inlet Air Zone Name
     WaterHeater:Mixed,       !- Tank Object Type
     HPWHScheduledTank_unit1,       !- Tank Name
-    ,                        !- Tank Use Side Inlet Node Name
-    ,                        !- Tank Use Side Outlet Node Name
+    Water Heater use inlet node_unit1,                        !- Tank Use Side Inlet Node Name
+    Water Heater use outlet node_unit1,                        !- Tank Use Side Outlet Node Name
     Coil:WaterHeating:AirToWaterHeatPump:Pumped,  !- DX Coil Object Type
     HPWHScheduledDXCoil,     !- DX Coil Name
     11.0,                    !- Minimum Inlet Air Temperature for Compressor Operation {C}
@@ -3294,11 +3294,11 @@ Boiler:HotWater,
     0,                !- Peak Use Flow Rate {m3/s}
     ,  !- Use Flow Rate Fraction Schedule Name
     ,                        !- Cold Water Supply Temperature Schedule Name
-    ,                        !- Use Side Inlet Node Name
-    ,                        !- Use Side Outlet Node Name
+    Water Heater use inlet node_unit1,                        !- Use Side Inlet Node Name
+    Water Heater use outlet node_unit1,                        !- Use Side Outlet Node Name
     ,                        !- Use Side Effectiveness
-    Water Heater use inlet node_unit1,  !- Source Side Inlet Node Name
-    Water Heater use outlet node_unit1,  !- Source Side Outlet Node Name
+    ,  !- Source Side Inlet Node Name
+    ,  !- Source Side Outlet Node Name
     0.95;                    !- Source Side Effectiveness
 
   Coil:WaterHeating:AirToWaterHeatPump:Pumped,
@@ -3318,8 +3318,8 @@ Boiler:HotWater,
     0.1,                     !- Fraction of Condenser Pump Heat to Water
     HPScheduledFanAirOutletNode,  !- Evaporator Air Inlet Node Name
     HPScheduledAirOutletNode,!- Evaporator Air Outlet Node Name
-    Water Heater use outlet node_unit1,  !- Condenser Water Inlet Node Name
-    Water Heater use inlet node_unit1,  !- Condenser Water Outlet Node Name
+    HPPlantWaterInletNode,   !- Condenser Water Inlet Node Name
+    HPPlantWaterOutletNode,  !- Condenser Water Outlet Node Name
     120.0,                   !- Crankcase Heater Capacity {W}
     ,                        !- Crankcase Heater Capacity Function of Temperature Curve Name
     5.0,                     !- Maximum Ambient Temperature for Crankcase Heater Operation {C}
@@ -3464,9 +3464,8 @@ PlantEquipmentList,
 
 PlantEquipmentList,
     DHW Plant Equipment_unit1,  !- Name
-    WaterHeater:Mixed,       !- Equipment 1 Object Type
-    HPWHScheduledTank_unit1;      !- Equipment 1 Name
-
+    WaterHeater:HeatPump:PumpedCondenser,  !- Equipment 1 Object Type
+    ScheduledHeatPumpWaterHeater;  !- Equipment 1 Name
 
 !-   ===========  ALL OBJECTS IN CLASS: PLANTEQUIPMENTOPERATION:HEATINGLOAD ===========
 
