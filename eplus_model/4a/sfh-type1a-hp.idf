@@ -3297,8 +3297,8 @@ Boiler:HotWater,
     Water Heater use inlet node_unit1,                        !- Use Side Inlet Node Name
     Water Heater use outlet node_unit1,                        !- Use Side Outlet Node Name
     ,                        !- Use Side Effectiveness
-    ,  !- Source Side Inlet Node Name
-    ,  !- Source Side Outlet Node Name
+    HPPlantWaterOutletNode,  !- Source Side Inlet Node Name
+    HPPlantWaterInletNode,  !- Source Side Outlet Node Name
     0.95;                    !- Source Side Effectiveness
 
   Coil:WaterHeating:AirToWaterHeatPump:Pumped,
