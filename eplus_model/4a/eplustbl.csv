@@ -1,4 +1,4 @@
-Program Version:,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
+Program Version:,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.17 10:00
 Tabular Output Report in Format: ,Comma
 
 Building:,SF
@@ -205,7 +205,7 @@ FOR:,Entire Facility
 General
 
 ,,Value
-,Program Version and Build,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
+,Program Version and Build,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.17 10:00
 ,RunPeriod,DETACHED HOUSE ANNUAL
 ,Weather File,DEBRECEN - HUN IWEC Data WMO#=128820
 ,Latitude [deg],47.48
@@ -774,9 +774,9 @@ HVAC
 Input Fields
 
 ,,Count
-,IDF Objects,265
+,IDF Objects,272
 ,Defaulted Fields,120
-,Fields with Defaults,1059
+,Fields with Defaults,1072
 ,Autosized Fields,14
 ,Autosizable Fields,20
 ,Autocalculated Fields,45

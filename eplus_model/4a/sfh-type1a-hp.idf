@@ -3686,4 +3686,12 @@ OutputControl:ReportingTolerances,
     1.11,                    !- Tolerance for Time Heating Setpoint Not Met {deltaC}
     1.11;                    !- Tolerance for Time Cooling Setpoint Not Met {deltaC}
 
+Output:VariableDictionary,regular,Name;
 
+! --- Variable
+Output:Variable,*,Water Heater Use Side Inlet Temperature [C],hourly;
+Output:Variable,*,Water Heater Use Side Outlet Temperature [C],hourly;
+Output:Variable,*,Water Heater Source Side Inlet Temperature [C],hourly;
+Output:Variable,*,Water Heater Source Side Outlet Temperature [C],hourly;
+Output:Variable,*,Water Heater Water Volume Flow Rate [m3/s],hourly;
+Output:Variable,*,Water Heater Electricity Rate [W],hourly;

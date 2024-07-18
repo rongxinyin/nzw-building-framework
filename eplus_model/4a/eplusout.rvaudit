@@ -1,8 +1,11 @@
  ReadVarsESO
  processing:./sfh-type1a-hp.rvi
- Requested ESO file=eplusout.eso
- does not exist.  ReadVarsESO program terminated.
- ReadVarsESO program terminated.
+ input file:eplusout.eso
+ output file:eplusout.csv
+ getting all vars from:eplusout.eso
+  number variables requested for output=           6
+ ReadVars Run Time=00hr 00min  0.09sec
+ ReadVarsESO program completed successfully.
  ReadVarsESO
  processing:./sfh-type1a-hp.mvi
  Requested ESO file=eplusout.mtr

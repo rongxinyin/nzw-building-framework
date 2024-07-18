@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
+Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.17 10:00
 ! This file shows details about the branches, nodes, and other
 ! elements of the flow connections.
 ! This file is intended for use in "debugging" potential problems
@@ -47,8 +47,8 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
  Node,35,WATER HEATER USE INLET NODE_UNIT1,Water,2
  Node,36,WATER HEATER USE OUTLET NODE_UNIT1,Water,2
  Node,37,NODE 1,Air,0
- Node,38,HPPLANTWATERINLETNODE,Water,1
- Node,39,HPPLANTWATEROUTLETNODE,Water,1
+ Node,38,HPPLANTWATERINLETNODE,Water,2
+ Node,39,HPPLANTWATEROUTLETNODE,Water,2
  Node,40,HPSCHEDULEDFANAIROUTLETNODE,Air,1
  Node,41,HPSCHEDULEDAIROUTLETNODE,Air,1
  Node,42,MODEL OUTDOOR AIR NODE,Air,0
@@ -291,7 +291,7 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
  Parent Node Connection,DHW SUPPLY OUTLET NODE_UNIT1,PLANTLOOP,DHW LOOP_UNIT1,Sensor,1
 ! ===============================================================
 ! <#Non-Parent Node Connections>,<Number of Non-Parent Node Connections>
- #Non-Parent Node Connections,74
+ #Non-Parent Node Connections,76
 ! <Non-Parent Node Connection>,<Node Name>,<Node ObjectType>,<Node ObjectName>,<Node ConnectionType>,<Node FluidStream>
  Non-Parent Node Connection,NODE 1,ZONEHVAC:EQUIPMENTCONNECTIONS,LIVING_UNIT,ZoneNode,1
  Non-Parent Node Connection,HPSCHEDULEDFANAIROUTLETNODE,COIL:WATERHEATING:AIRTOWATERHEATPUMP:PUMPED,HPWHSCHEDULEDDXCOIL,Inlet,1
@@ -303,6 +303,8 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49
  Non-Parent Node Connection,HPSCHEDULEDFANAIROUTLETNODE,FAN:SYSTEMMODEL,HPWHSCHEDULEDFAN,Outlet,1
  Non-Parent Node Connection,WATER HEATER USE INLET NODE_UNIT1,WATERHEATER:MIXED,HPWHSCHEDULEDTANK_UNIT1,Inlet,1
  Non-Parent Node Connection,WATER HEATER USE OUTLET NODE_UNIT1,WATERHEATER:MIXED,HPWHSCHEDULEDTANK_UNIT1,Outlet,1
+ Non-Parent Node Connection,HPPLANTWATEROUTLETNODE,WATERHEATER:MIXED,HPWHSCHEDULEDTANK_UNIT1,Inlet,2
+ Non-Parent Node Connection,HPPLANTWATERINLETNODE,WATERHEATER:MIXED,HPWHSCHEDULEDTANK_UNIT1,Outlet,2
  Non-Parent Node Connection,NODE 12,SETPOINTMANAGER:SCHEDULED,SETPOINT MANAGER SCHEDULED,Setpoint,1
  Non-Parent Node Connection,DHW SUPPLY OUTLET NODE_UNIT1,SETPOINTMANAGER:SCHEDULED,DHW LOOP SETPOINT MANAGER_UNIT1,Setpoint,1
  Non-Parent Node Connection,NODE 19,PIPE:ADIABATIC,PIPE ADIABATIC 1,Inlet,1

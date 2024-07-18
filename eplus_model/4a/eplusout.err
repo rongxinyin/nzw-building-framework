@@ -1,4 +1,4 @@
-Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49,
+Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.17 10:00,
    ************* Beginning Zone Sizing Calculations
    ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
    **   ~~~   ** Found first in surface=189_GROUNDFLOOR_0_0_0
@@ -7,14 +7,6 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49,
    **   ~~~   ** If schedules are specified for air velocity, clothing insulation, and/or work efficiency but no thermal comfort
    **   ~~~   ** thermal comfort model is selected, the schedules will be listed as unused schedules in the .err file.
    **   ~~~   ** To avoid these errors, select a valid thermal comfort model or eliminate these schedules in the PEOPLE input.
-   ** Severe  ** WaterHeater:HeatPump:PumpedCondenser = SCHEDULEDHEATPUMPWATERHEATER:
-   **   ~~~   ** Heat Pump condenser water inlet node name does not match water heater tank source outlet node name.
-   **   ~~~   ** Heat pump condenser water inlet and outlet node names = HPPLANTWATERINLETNODE and HPPLANTWATEROUTLETNODE
-   **   ~~~   ** Water heater tank source side inlet and outlet node names      =  and 
-   ** Severe  ** WaterHeater:HeatPump:PumpedCondenser = SCHEDULEDHEATPUMPWATERHEATER:
-   **   ~~~   ** Heat Pump condenser water outlet node name does not match water heater tank source inlet node name.
-   **   ~~~   ** Heat pump condenser water inlet and outlet node names = HPPLANTWATERINLETNODE and HPPLANTWATEROUTLETNODE
-   **   ~~~   ** Water heater tank source side inlet and outlet node names      =  and 
    ** Warning ** Calculated design cooling load for zone=LIVING_UNIT is zero.
    **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
    ************* Beginning Plant Sizing Calculations
@@ -25,13 +17,7 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49,
    ************* All Supply Air Paths passed integrity testing
    ************* Testing Individual Return Air Path Integrity
    ************* All Return Air Paths passed integrity testing
-   ** Severe  ** Node Connection Error, Node="HPPLANTWATERINLETNODE", Inlet node did not find an appropriate matching "outlet" node.
-   **   ~~~   ** If this is an outdoor air inlet node, it must be listed in an OutdoorAir:Node or OutdoorAir:NodeList object.
-   **   ~~~   ** Reference Object=WaterHeater:HeatPump:PumpedCondenser, Name=SCHEDULEDHEATPUMPWATERHEATER
-   ** Severe  ** Node Connection Error, Node="HPPLANTWATERINLETNODE", Inlet node did not find an appropriate matching "outlet" node.
-   **   ~~~   ** If this is an outdoor air inlet node, it must be listed in an OutdoorAir:Node or OutdoorAir:NodeList object.
-   **   ~~~   ** Reference Object=Coil:WaterHeating:AirToWaterHeatPump:Pumped, Name=HPWHSCHEDULEDDXCOIL
-   ************* There were 2 node connection errors noted.
+   ************* No node connection errors were found.
    ************* Beginning Simulation
    ** Warning ** More than 4% of time (350.4 hours) uncomfortable in one or more zones 
    **   ~~~   ** Based on ASHRAE 55-2004 graph (Section 5.2.1.1)
@@ -42,14 +28,6 @@ Program Version,EnergyPlus, Version 24.1.0-9d7789a3ac, YMD=2024.07.16 16:49,
    ************* There are 4 unused week schedules in input.
    ************* There are 10 unused day schedules in input.
    ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
-   *************
-   ************* ===== Final Error Summary =====
-   ************* The following error categories occurred.  Consider correcting or noting.
-   ************* Node Connection Errors
-   ************* ..Node connection errors are often caused by spelling mistakes in a node name field.
-   ************* ..To track down the problem, search the idf file for each node name listed to see if it
-   ************* ..occurs in the expected input fields.
-   *************
    ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
-   ************* EnergyPlus Sizing Error Summary. During Sizing: 3 Warning; 2 Severe Errors.
-   ************* EnergyPlus Completed Successfully-- 5 Warning; 4 Severe Errors; Elapsed Time=00hr 00min  4.08sec
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 3 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 5 Warning; 0 Severe Errors; Elapsed Time=00hr 00min  4.23sec
